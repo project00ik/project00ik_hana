@@ -406,7 +406,7 @@
 
 .document_slide + .btn_type07 {display:inline-block;width:calc(100% - .5rem);margin:3rem auto 0;padding:1rem 0;background:#fff;font-size:1.6rem;line-height:2.2rem;text-align:center;font-weight:500;}
 .document_slide + .btn_type07 input {display:none;width:.1rem;height:.1rem;}
-`
+
 .document_img {overflow:hidden;position:absolute;top:0;left:0;width:100%;height:100%;background:#fff url(../images/fileadd@2x.png) no-repeat center;background-size:1.8rem;}
 .document_img:before {content:'';position:absolute;top:0;left:0;width:100%;height:100%;box-shadow:0 0 0 1px #eee inset;}
 .document_img img {width:100%;height:100%;object-fit:contain;}
