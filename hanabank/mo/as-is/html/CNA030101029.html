@@ -1,0 +1,213 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header class="steps_area">
+                <button class="back_btn"></button>
+                <h2 class="h_tit">
+                    <ul>
+                        <li class="end"><span></span></li>
+                        <li class="end"><span></span></li>
+                        <li class="ing"><span>3 상품신청</span></li>
+                        <li><span>4</span></li>
+                    </ul>
+                </h2>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_mi">거래하실 영업점</span>을 <br />선택해 주세요.</p>
+
+                    <div id="upScroll" class="input_form_group j_focus_group on">
+                        <!-- 영업점 선택 -->
+                        <div class="input_form input_form_sel"> <!-- 20.04.15 Update --> 
+                            <div class="input_wrap">
+                                <div class="input_title j_focus_open j_layer_open" layer-target="#layerpopup01">영업점 선택</div>
+                                <div class="input_layer">
+                                    <div id="idInput01" class="input_data j_layer_open" layer-target="#layerpopup01"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //영업점 선택 -->
+
+                        <!-- 21.04.16 Update -->
+                        <!-- 이용한도 해제 코드 등록(선택) -->
+                        <!-- 삭제
+                        <div class="input_form02 j_focus02">
+                            <div class="input_check">
+                                <input type="checkbox" id="inputCheck02" class="j_input_check" input-target="#idInputSub02">
+                                <label for="inputCheck02">
+                                    (선택) 이용한도 해제 코드 등록
+                                </label>
+                            </div>
+                            <div class="input_wrap">
+                                <div class="input_txt">
+                                    <input id="idInputSub02" class="input_data placeholder01 j_input_value" type="text" placeholder="영문, 숫자 6자리 입력">
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                            <div class="input_error">
+                                <p>해제 코드가 일치하지 않습니다.</p>
+                            </div>    
+                        </div> -->
+                        <!-- //이용한도 해제 코드 등록(선택) -->
+                        <!-- //21.04.16 Update -->
+
+                        <div class="txt_notice j_toggle">
+                            <button type="button" class="txt_notice_open j_toggle_open">알아두세요</button>
+                            <div class="txt_notice_cont j_toggle_cont">
+                                <ul class="list_type01">
+                                    <li>편리한 이용을 위해 가까운 영업점을 선택해주세요.</li>
+                                    <!-- <li>권유 받은 직원이 있는 경우 체크해서 등록해 주세요.</li> -->
+                                    <!-- <li>영업점에서 이용한도 해제코드를 부여 받은 경우 체크해서 입력해 주세요.</li> 삭제 --> <!-- 21.04.16 Update -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn_wrap btn_fix j_btn_fix" style="display: none;">
+                        <a href="#none" class="btn_type01">다음</a>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- 위치기반서비스 이용 동의/해제 -->
+        <!-- 20.04.15 Update --> 
+        <div id="layerpopup01" class="layerpopup">
+            <div class="layer_center">
+                <div class="layer_contents">
+                    <div class="pop_content">
+                        <h5 class="txt_tit">위치정보 수집·이용 동의 안내</h5>
+                        <div class="txt_cont">
+                            <div class="r_gray_box">
+                                <ul class="list_dot">
+                                    <li>수집항목 : 현 위치정보</li>
+                                    <li>수집 및 이용 목적 : 가까운 지점 찾기</li>
+                                    <li>보유 및 이용기간 : 지점 검색 후 즉시 폐기</li>
+                                </ul>
+                            </div>
+                            <div class="desc_txt_box">
+                                <p>위치기반 서비스를 이용하시면 고객님 위치를 기반으로 가까운 영업점을 찾으실 수 있습니다.</p>
+                                <em>위치기반 서비스 이용을 위해 ‘위치기반 서비스 이용약관’ 동의가 필요합니다. “동의” 시 가까운 영업점을 찾습니다.</em> <!-- 2021.06.24 Update -->
+                                <p class="t_mi">위치기반 서비스 이용에 동의하시겠습니까?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_area btn_02">
+                        <button type="button" class="cancel j_layer_close">아니오</button> <!-- 2021.05.27 Update -->
+                        <button type="button" class="confirm">예</button>
+                    </div>
+                    <button type="button" class="layer_close j_layer_close">닫기</button> <!-- 2021.06.03 D:팝업닫기 버튼 추가 -->
+                </div>
+            </div>
+        </div>
+        <!-- //20.04.15 Update --> 
+        <!-- //위치기반서비스 이용 동의/해제 -->
+
+        <!-- 영업점 선택 -->
+        <div id="layerpopup02" class="layerpopup">
+            <div class="layer_90">
+                <div class="layer_contents">
+                    <div class="pop_tit">
+                        <h5>영업점 검색</h5>
+                        <div class="input_form j_focus">
+                            <div class="input_wrap">
+                                <div class="input_txt">
+                                    <form action="">
+                                        <input class="input_data j_input_value" type="search" value="영업">
+                                        <button type="button" class="input_data_del j_data_del">삭제</button>
+                                        <button type="button" class="input_data_search">삭제</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="adress_dis">
+                            <p>영업 검색결과</p>
+                        </div>
+                    </div>
+                    <div class="pop_content j_scroll">
+                        <div class="swiper-wrapper">
+                            <div class="pop_inner swiper-slide">
+                                <div class="store_lists_area">
+                                    <ul class="store_lists j_select">
+                                        <li>
+                                            <a href="#idInput01">
+                                                <p class="name">대전영업부</p>
+                                                <p class="states_name">대전광역시 중구 계룡로 820 (오류동)</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#idInput01">
+                                                <p class="name">영업1부</p>
+                                                <p class="states_name">서울특별시 중구 을지로 35 (을지로1가)</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#idInput01">
+                                                <p class="name">대전영업부</p>
+                                                <p class="states_name">대전광역시 중구 계룡로 820 (오류동)</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#idInput01">
+                                                <p class="name">영업1부</p>
+                                                <p class="states_name">서울특별시 중구 을지로 35 (을지로1가)</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#idInput01">
+                                                <p class="name">대전영업부</p>
+                                                <p class="states_name">대전광역시 중구 계룡로 820 (오류동)</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#idInput01">
+                                                <p class="name">영업1부</p>
+                                                <p class="states_name">서울특별시 중구 을지로 35 (을지로1가)</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#idInput01">
+                                                <p class="name">대전영업부</p>
+                                                <p class="states_name">대전광역시 중구 계룡로 820 (오류동)</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#idInput01">
+                                                <p class="name">영업1부</p>
+                                                <p class="states_name">서울특별시 중구 을지로 35 (을지로1가)</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="cancel j_layer_close">취소</button>
+                </div>
+            </div>
+        </div>
+        <!-- //영업점 선택 -->
+    </body>
+</html>

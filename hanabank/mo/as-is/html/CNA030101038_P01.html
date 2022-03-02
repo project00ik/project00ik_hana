@@ -1,0 +1,312 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header>
+                <button class="back_btn"></button>
+                <p class="h_tit">신청결과</p>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span class="on"></span>
+                    </div>
+                    <p class="pages_tit small"><span class="t_mi">금융거래목적증빙</span> <br />서류를 촬영 <br />또는 제출해 주세요.</p>
+
+                    <div id="upScroll" class="document_area">
+                        <!-- 촬영안내 -->
+                        <div class="picture_txt">
+                            <p>금융거래목적증빙 서류<span>(<strong class="color01">1</strong>/30)</span></p> <!-- [개발] 서류가 0개 일 경우 .color01 삭제 -->
+                        </div>
+                        <!-- //촬영안내 -->
+
+                        <!-- form -->
+                        <div class="input_form input_form_sel j_focus">
+                            <div class="input_radio">
+                                <input type="radio" name="inputRadio-G2" id="inputRadio-G2-01" class="j_input_check" checked="checked" />
+                                <label for="inputRadio-G2-01">표준재무제표증명원</label>
+                            </div>
+                            <div class="input_radio">
+                                <input type="radio" name="inputRadio-G2" id="inputRadio-G2-02" class="j_input_check" />
+                                <label for="inputRadio-G2-02">부가가치세과세표준증명원</label>
+                            </div>
+                        </div>
+                        <!-- form -->
+
+                        <!-- 서류 올리기 -->
+                        <div class="document_slide">
+                            <!-- Swiper -->
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <div class="document_img">
+                                            <img src="../images/icon-img06@2x_old.png" alt="이미지 설명" />
+                                            <button type="button" class="img_del">삭제</button>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="document_img pdf"> <!-- [개발] PDF 파일 등록시 .pdf 추가 -->
+                                            <img src="../images/icon-img06@2x_old.png" alt="이미지 설명" />
+                                            <button type="button" class="img_del">삭제</button>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="document_img"></div>
+                                    </li>
+                                </ul>
+
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                            <!-- //Swiper -->
+                        </div>
+                        <label class="btn_type07"><input type="file" />+ 서류등록</label>
+                        <!-- //서류 올리기 -->
+
+                        <!-- 표준재무제표증명원 서류 발급번호 -->
+                        <div class="input_form">
+                            <div class="input_wrap">
+                                <label for="idInput-G1-02" class="input_title j_focus_open">금융거래목적증빙 서류 발급번호<button type="button" class="btn_tip j_layer_open" layer-target="#layerpopup02_1">알아두세요</button></label>
+                                <div class="input_txt">
+                                    <input id="idInput-G1-02" class="input_data j_input_value" value="" type="tel" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="txt_notice02">발급일로부터 90일 이내인지 확인해 주세요.</p>
+                    </div> 
+
+                    <div class="btn_wrap btn_fix">
+                        <a href="#none" class="btn_type01">다음서류제출</a>
+                    </div>
+                </section>
+            </div>
+			<div id="layerpopup02_1" class="layerpopup layer_notice" style="display: none;">
+                <div class="layer_center">
+                    <div class="layer_notice_cont">
+                        <div class="notice_doc">
+                            <img src="../images/certificate01.png" alt="사업자 등록증명원">
+                            <p class="notice_txt"><span>좌측 상단</span>의 <span>발급번호 14자리</span>를<br>정확하게 입력해 주세요.</p>
+                            <ul class="list_type01">
+                                <li>발급신청 : 국세청홈텍스&gt;민원증명발급신청&gt;사업자등록증명원</li>
+                            </ul>
+                        </div>
+                        
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- S:211112 Update -->
+            <div id="layerpopup01" class="layerpopup type01">
+                <div class="layer_center">
+                    <div class="layer_contents">
+                        <div class="pop_tit type02">
+                            <h5>제출 유의사항</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="pop_img_wrap">
+										<img src="../images/sample-finance.jpg" alt="표준재무제표증명 제출 예시">
+									</div>
+									<div class="txt_notice">
+										<div class="txt_notice_cont">
+											<ul class="list_type01">
+												<li>발급일자는 신청일로부터 90일 이내여야 합니다.</li>
+												<li class="color02">모든 페이지를 제출해 주세요.</li>
+												<li>홈텍스 발급경로<br>hometax.go.kr > 민원증명 > 민원증명발급신청 > 표준재무제표증명 / 부가가치세과세표준증명</li>
+											</ul>
+										</div>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_area">
+                            <button type="button" class="confirm j_layer_close">확인</button>
+                        </div>
+                        <button type="button" class="layer_close j_layer_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- E:211112 Update -->
+
+            <!-- 전자금융 신청 -->
+            <div id="layerpopup02" class="layerpopup">
+                <div class="layer_center">
+                    <div class="layer_contents">
+                        <div class="pop_tit type02">
+                            <h5>가입신청 완료</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="txt_cont">
+                                        <ul class="finished_result_info">
+                                            <li>
+                                                <strong>상품명</strong>
+                                                <span>전자금융(개인뱅킹)</span>
+                                            </li>
+                                            <li>
+                                                <strong>ID</strong>
+                                                <span>HANAHANA</span>
+                                            </li>
+                                            <li>
+                                                <strong>보안매체</strong>
+                                                <span>보유OTP</span>
+                                            </li>
+                                            <li>
+                                                <strong>1일 이체한도</strong>
+                                                <span>500,000,000 원</span>
+                                            </li>
+                                            <li>
+                                                <strong>1회 이체한도</strong>
+                                                <span>500,000,000 원</span>
+                                            </li>
+                                            <li>
+                                                <strong>출금계좌 <span class="color01">(6)</span></strong>
+                                                <span>111-111111-111
+                                                    <button type="button" class="toggle_btn">더보기</button>
+                                                </span>
+                                                <ul class="account_list">
+                                                    <li>111-111111-111</li>
+                                                    <li>111-111111-111</li>
+                                                    <li>111-111111-111</li>
+                                                    <li>111-111111-111</li>
+                                                    <li>111-111111-111</li>
+                                                </ul>
+                                                <style>
+                                                </style>
+                                            </li>
+                                            <li>
+                                                <strong>처리완료일</strong>
+                                                <span>2017-02-09</span>
+                                            </li>
+                                            <li>
+                                                <strong>관리점</strong>
+                                                <span>서초남지점</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_area">
+                            <button type="button" class="confirm j_layer_close">확인</button>
+                        </div>
+                        <button type="button" class="layer_close j_layer_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //전자금융 신청 -->
+
+            <!-- 1원 인증 완료 -->
+            <div id="layerpopup03" class="layerpopup">
+                <div class="layer_center">
+                    <div class="layer_contents">
+                        <div class="pop_tit type02">
+                            <h5>인증번호 확인 완료</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="txt_cont">
+                                        <ul class="finished_result_info">
+                                            <li>
+                                                <strong>인증번호 발송계좌</strong>
+                                                <span>신한은행<br />000-000000-00000</span>
+                                            </li>
+                                            <li>
+                                                <strong>완료일시</strong>
+                                                <span>2017.02.20 13:22</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_area">
+                            <button type="button" class="confirm j_layer_close">확인</button>
+                        </div>
+                        <button type="button" class="layer_close j_layer_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //1원 인증 완료 -->
+
+            <!-- 당행계좌 검증 완료 -->
+            <div id="layerpopup04" class="layerpopup">
+                <div class="layer_center">
+                    <div class="layer_contents">
+                        <div class="pop_tit type02">
+                            <h5>당행계좌 검증 완료</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="txt_cont">
+                                        <ul class="finished_result_info">
+                                            <li>
+                                                <strong>출금계좌</strong>
+                                                <span>신한은행<br />000-000000-00000</span>
+                                            </li>
+                                            <li>
+                                                <strong>완료일시</strong>
+                                                <span>2017.02.20 13:22</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_area">
+                            <button type="button" class="confirm j_layer_close">확인</button>
+                        </div>
+                        <button type="button" class="layer_close j_layer_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //당행계좌 검증 완료 -->
+
+            
+
+        </div>
+
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				slidesPerView : 3,
+				spaceBetween : 10,
+				navigation : {
+					nextEl : '.swiper-button-next',
+					prevEl : '.swiper-button-prev',
+				}
+			});
+			
+		</script>
+		<!-- S:211112 Update -->
+        <script>
+            $(window).load(function(){
+                layerOpen.init('#layerpopup01');
+            })
+        </script>
+		<!-- E:211112 Update -->
+    </body>
+</html>

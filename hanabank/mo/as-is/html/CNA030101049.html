@@ -1,0 +1,173 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header class="steps_area">
+                <button class="back_btn"></button>
+                <h2 class="h_tit">
+                    <ul>
+                        <li class="end"><span></span></li>
+                        <li class="ing"><span>2 기본정보</span></li>
+                        <li><span>3</span></li>
+                        <li><span>4</span></li>
+                    </ul>
+                </h2>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_mi">법인의<br />FATCA/CRS 정보</span>를<br />입력해 주세요.</p> <!-- 2021.06.18, 2021.05.07 Update -->
+
+                    <div id="upScroll" class="input_form_group j_focus_group on">
+                        <!-- 2021.06.18 Update [D] : 라디오버튼 default ; NULL -->
+                        <!-- 2021.06.17 Update [D] : 넘버링 추가 -->
+
+                        <!-- Question 1 -->
+                        <div class="input_form">
+                            <p class="question">1. 귀 법인은 조세목적상 국내법인에 해당합니까?</p> <!-- 2021.06.18, 2021.06.17 Update -->
+                            <div class="hbox_form">
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G1" id="inputRadio-G1-01" class="j_input_check" checked="checked" /> <!-- 2021.06.25 Update -->
+                                    <label for="inputRadio-G1-01">예</label>
+                                </div>
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G1" id="inputRadio-G1-02" class="j_input_check" />
+                                    <label for="inputRadio-G1-02">아니오</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 1 -->
+
+                        <!-- 2021.05.07 Update -->
+                        <!-- Question 2 -->
+                        <div class="input_form">
+                            <p class="question">2. 귀 법인은 예금기관, 수탁기관 투자법인 또는 특정보험회사(이하 ‘금융회사’)에 해당하십니까?</p> <!-- 2021.06.24, 2021.06.17 Update -->
+                            <div class="hbox_form">
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G2" id="inputRadio-G2-01" class="j_input_check" />
+                                    <label for="inputRadio-G2-01">예</label>
+                                </div>
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G2" id="inputRadio-G2-02" class="j_input_check" checked="checked" /> <!-- 2021.06.25 Update -->
+                                    <label for="inputRadio-G2-02">아니오</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 2 -->
+                        <!-- //2021.05.07 Update -->
+
+                        <!-- Question 3 -->
+                        <div class="input_form">
+                            <p class="question">3. 귀 법인은 능동적 수익을 창출하는 능동적 일반 법인에 해당하십니까?</p> <!-- 2021.06.17 Update -->
+                            <div class="hbox_form">
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G3" id="inputRadio-G3-01" class="j_input_check" checked="checked" /> <!-- 2021.06.25 Update -->
+                                    <label for="inputRadio-G3-01">예</label>
+                                </div>
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G3" id="inputRadio-G3-02" class="j_input_check" />
+                                    <label for="inputRadio-G3-02">아니오</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="txt_notice j_toggle">
+                            <button type="button" class="txt_notice_open j_toggle_open">알아두세요</button>
+                            <div class="txt_notice_cont j_toggle_cont">
+                                <p class="tit">능동적 수익을 창출하는 능동적 일반법인이란?</p>
+                                <p class="txt">직전 연도 총 수입의 50% 미만의 수동적 수입이고, 직전 연도의 보유 자산 중 50% 미만이 수동적 수입이고, 직전 연도의 보유 자산 중 50% 미만이 수동적 수입을 창출 하거나 수동적 수입의 창출을 위하여 보유된 경우, 수동적수입이란 이자, 배당, 임대료, 수동적자산매각 이익 등에서 발생한 수입을 의미하며, 적극적인 영업 활동에 의한 임대료는 제외한다.</p>
+                            </div>
+                        </div>
+                        <!-- Question 3 -->
+
+                        <!-- 2021.04.27 Update -->
+                        <!-- 해외 세법상 거주자 또는 잡세의무자 확인 -->
+                        <div class="input_form">
+                            <p class="question">해외 세법상 거주자 또는 납세의무자 확인</p>
+                            <p class="quest_desc">국제조세조정에 관한 법률 및 동법 시행령에 따른 당사의 분류는 <span class="color01">해외 납세의무가 없는 비금융단체</span>이며, 만약 변경 사항이 발생할 경우에는 30일 이내에 통보할 것을 확인합니다.</p>
+                            <div class="hbox_form">
+                                <div class="input_check">
+                                    <input type="checkbox" id="inputCheck-G1-01" class="j_input_check" />
+                                    <label for="inputCheck-G1-01">본인은 본인확인서 작성과 관련하여, 상기 내용을 충분히 공지 받았음을 확인합니다.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 해외 세법상 거주자 또는 잡세의무자 확인 -->
+                        <!-- //2021.04.27 Update -->
+                    </div>
+
+                    <div class="btn_wrap btn_fix">
+                        <a href="#none" class="btn_type01">다음</a>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Question 1 -->
+            <div class="layerpopup">
+                <div class="layer_center">
+                    <div class="layer_contents">
+                        <div class="pop_content">
+                            <p>미국법인인 경우 비대면 계좌개설이 불가합니다. 영업점에 내점하여 처리하시기 바랍니다.</p>
+                        </div>
+                        <div class="btn_area btn_02">
+                            <button type="button" class="cancel j_layer_close">취소</button>
+                            <button type="button" class="confirm j_layer_close">동의</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Question 1 -->
+
+            <!-- Question 2 -->
+            <div class="layerpopup">
+                <div class="layer_center">
+                    <div class="layer_contents">
+                        <div class="pop_content">
+                            <p>금융기관인 경우 비대면 계좌개설이 불가합니다. 영업점에 내점하여 처리히사기 바랍니다.</p>
+                        </div>
+                        <div class="btn_area btn_02">
+                            <button type="button" class="cancel j_layer_close">취소</button>
+                            <button type="button" class="confirm j_layer_close">동의</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Question 2 -->
+
+            <!-- Question 3 -->
+            <div class="layerpopup">
+                <div class="layer_center">
+                    <div class="layer_contents">
+                        <div class="pop_content">
+                            <p>수동적 비금융법인인 경우 비대면 계좌개설이 불가합니다. 영업점에 내점하여 처리하시기 바랍니다.</p>
+                        </div>
+                        <div class="btn_area btn_02">
+                            <button type="button" class="cancel j_layer_close">취소</button>
+                            <button type="button" class="confirm j_layer_close">동의</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Question 3 -->
+            
+        </div>
+    </body>
+</html>

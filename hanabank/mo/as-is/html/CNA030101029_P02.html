@@ -1,0 +1,425 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header class="steps_area">
+                <button class="back_btn"></button>
+                <h2 class="h_tit">
+                    <ul>
+                        <li class="end"><span></span></li>
+                        <li class="end"><span></span></li>
+                        <li class="ing"><span>3 상품신청</span></li>
+                        <li><span>4</span></li>
+                    </ul>
+                </h2>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_mi">거래하실 영업점</span>을 <br />선택해 주세요.</p>
+
+                    <div class="btn_wrap btn_fix j_btn_fix" style="display: none;">
+                        <a href="#none" class="btn_type01">다음</a>
+                    </div>
+
+                    <div id="upScroll" class="input_form_group j_focus_group on"></div> <!-- 2021.06.07 Update -->
+                </section>
+            </div>
+
+        </div>
+
+        <!-- 영업점 선택 -->
+        <div id="layerpopup02" class="layerpopup">
+            <div class="layer_90 tab_layer">
+                <div class="layer_contents">
+                    <div class="pop_tit ">
+                        <h5>영업점 검색</h5>
+                    </div>
+                    <div class="pop_content j_scroll">
+                        <div class="swiper-wrapper">
+                            <div class="pop_inner swiper-slide">
+                                <div class="tab_area">
+                                    <ul class="tabs">
+                                        <li class="on">지점명</li>
+                                        <li>주소</li>
+                                        <li>지하철명</li>
+                                    </ul>
+                                </div>
+                                <div class="tab_cont_area branch">
+                                    <!--  지점명 -->
+                                    <div class="tabcont">
+                                        <div class="cont_part">
+                                            <div class="input_form search j_focus">
+                                                <div class="input_wrap">
+                                                    <div class="input_txt">
+                                                        <form action="">
+                                                        <div class="j_search_inputBox">
+                                                            <input id="idInput01" class="input_data j_input_value" type="search" placeholder="지점명 입력">
+                                                            <button type="button" class="input_data_del j_data_del">삭제</button>
+                                                            <button type="button" class="input_data_search">검색</button>
+                                                        </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Map API -->
+                                            <div id="ex_click" class="map_api_area" style="background:#d8d8d8"></div>
+                                            <!-- //Map API -->
+
+                                            <!-- 검색결과 -->
+                                            <div class="branch_list">
+
+                                                <!-- 검색후 - nodata  -->
+                                                <!-- <div class="adress_dis">
+                                                    <p>검색결과가 없습니다.</p>
+                                                </div> -->
+                                                <!-- //검색후 - nodata  -->
+
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li class="ex_this">
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- //검색결과 -->
+                                        </div>
+                                    </div>
+                                    <!--  //지점명 -->
+
+                                    <!-- 주소 -->
+                                    <div class="tabcont">
+                                        <div class="cont_part">
+                                            <div class="input_form search j_focus">
+                                                <div class="input_wrap">
+                                                    <div class="input_txt">
+                                                        <form action="">
+                                                        <div class="j_search_inputBox">
+                                                            <input id="idInput01" class="input_data j_input_value" type="search" placeholder="주소 입력">
+                                                            <button type="button" class="input_data_del j_data_del">삭제</button>
+                                                            <button type="button" class="input_data_search">검색</button>
+                                                        </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Map API -->
+                                            <div class="map_api_area" style="background:#d8d8d8"></div>
+                                            <!-- //Map API -->
+
+                                            <!-- 검색결과 -->
+                                            <div class="branch_list">
+
+                                                <!-- 검색후 - nodata  -->
+                                                <div class="adress_dis">
+                                                    <p>검색결과가 없습니다.</p>
+                                                </div>
+                                                <!-- //검색후 - nodata  -->
+
+                                                <!-- <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                </ul> -->
+                                            </div>
+                                            <!-- //검색결과 -->
+                                        </div>
+                                    </div>
+                                    <!-- //주소 -->
+
+                                    <!-- 지하철명 -->
+                                    <div class="tabcont">
+                                        <div class="cont_part">
+                                            <div class="input_form search j_focus">
+                                                <div class="input_wrap">
+                                                    <div class="input_txt">
+                                                        <form action="">
+                                                        <div class="j_search_inputBox">
+                                                            <input id="idInput01" class="input_data j_input_value" type="search" placeholder="지하철명 입력">
+                                                            <button type="button" class="input_data_del j_data_del">삭제</button>
+                                                            <button type="button" class="input_data_search">검색</button>
+                                                        </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Map API -->
+                                            <div class="map_api_area" style="background:#d8d8d8"></div>
+                                            <!-- //Map API -->
+
+                                            <!-- 검색결과 -->
+                                            <div class="branch_list">
+
+                                                <!-- 검색후 - nodata  -->
+                                                <!-- <div class="adress_dis">
+                                                    <p>검색결과가 없습니다.</p>
+                                                </div> -->
+                                                <!-- //검색후 - nodata  -->
+
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <strong>중앙지점</strong>
+                                                            <p>서울특별시 서초구 동작대로 216 (방배동)</p>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- //검색결과 -->
+                                        </div>
+                                    </div>
+                                    <!-- //지하철명 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="cancel j_layer_close">취소</button>
+                </div>
+            </div>
+        </div>
+
+       <!-- <div id="layerpopup02" class="layerpopup">
+            <div class="layer_90">
+                <div class="layer_contents">
+                    <div class="pop_tit">
+                        <h5>영업점 검색</h5>
+                        <div class="input_form j_focus">
+                            <div class="input_wrap">
+                                <div class="input_txt">
+                                    <form action="">
+                                        <input class="input_data j_input_value" type="search" value="영업">
+                                        <button type="button" class="input_data_del j_data_del">삭제</button>
+                                        <button type="button" class="input_data_search">삭제</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="adress_dis">
+                            <p>영업 검색결과</p>
+                        </div>
+                    </div>
+                    <div class="pop_content j_scroll">
+                        <div class="swiper-wrapper">
+                            <div class="pop_inner swiper-slide">
+                               <div class="tab_area">
+                                    <ul class="tabs">
+                                        <li class="on">상품개요</li>
+                                        <li>상품내용</li>
+                                        <li>금리안내</li>
+                                    </ul>
+                                </div>
+                                <div class="tab_cont_area">
+                                    <div class="tabcont img_link type01">
+                                        <div class="store_lists_area">
+                                            <ul class="store_lists j_select">
+                                                <li>
+                                                    <a href="#idInput01">
+                                                        <p class="name">대전영업부</p>
+                                                        <p class="states_name">대전광역시 중구 계룡로 820 (오류동)</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#idInput01">
+                                                        <p class="name">영업1부</p>
+                                                        <p class="states_name">서울특별시 중구 을지로 35 (을지로1가)</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#idInput01">
+                                                        <p class="name">대전영업부</p>
+                                                        <p class="states_name">대전광역시 중구 계룡로 820 (오류동)</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#idInput01">
+                                                        <p class="name">영업1부</p>
+                                                        <p class="states_name">서울특별시 중구 을지로 35 (을지로1가)</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#idInput01">
+                                                        <p class="name">대전영업부</p>
+                                                        <p class="states_name">대전광역시 중구 계룡로 820 (오류동)</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#idInput01">
+                                                        <p class="name">영업1부</p>
+                                                        <p class="states_name">서울특별시 중구 을지로 35 (을지로1가)</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#idInput01">
+                                                        <p class="name">대전영업부</p>
+                                                        <p class="states_name">대전광역시 중구 계룡로 820 (오류동)</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#idInput01">
+                                                        <p class="name">영업1부</p>
+                                                        <p class="states_name">서울특별시 중구 을지로 35 (을지로1가)</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="cancel j_layer_close">취소</button>
+                </div>
+            </div>
+        </div> -->
+        <!-- //영업점 선택 -->
+
+        <script>
+            $(window).load(function(){
+                layerOpen.init('#layerpopup02');
+            });
+
+
+            // Sample
+            $(function() {
+                $('#ex_click').on('click', function(){
+                    var thisOffset = $('.ex_this').offset().top - 150; // 타켓 위치값
+                    // console.log(thisOffset);
+
+                    $('.swiper-wrapper').css({
+                        'transform':'translateY('+'-'+thisOffset+'px)', //translate 이동
+                        'transition':'.8s' //animate
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

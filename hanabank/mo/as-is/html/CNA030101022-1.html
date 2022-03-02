@@ -1,0 +1,328 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header class="steps_area">
+                <button class="back_btn"></button>
+                <h2 class="h_tit">
+                    <ul>
+                        <li class="end"><span></span></li>
+                        <li class="ing"><span>2 기본정보</span></li>
+                        <li><span>3</span></li>
+                        <li><span>4</span></li>
+                    </ul>
+                </h2>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_mi">고객확인정보</span>를 <br />입력해 주세요.</p>
+
+                    <div id="upScroll" class="input_form_group j_focus_group on">
+
+                        <!-- 수정가능 -->
+                        <div class="input_form on">
+                            <div class="input_wrap">
+                                <label for="idInput-G6-01" class="input_title j_focus_open">창립일자<span class="required">*</span></label>
+                                <div class="input_txt input_calendar">
+                                    <input id="idInput-G6-01" class="input_data placeholder01 j_input_value j_check_all" readonly="readonly" value="수정가능" placeholder="ex) 20201108" onfocus="this.blur()">
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            //달력
+                            new Rolldate({
+                                el: '#idInput-G6-01',
+                                format: 'YYYY-MM-DD',
+                                trigger:'click',
+                                lang: {
+                                    title: '창립일자'
+                                },
+                                //beginYear: 2000,
+                                //endYear: 2100
+                                init: function() {
+                                    $('html,body').css('overflow','hidden');
+                                    $('.contents,.rolldate-mask').on('touchmove',function(e) {e.preventDefault();});
+                                },
+                                moveEnd: function(scroll) {
+                                    
+                                },
+                                confirm: function(date) {
+                                    $(this.config.el).addClass('check_on');
+
+                                    focusMove.init($(this.config.el));
+
+                                    $('html,body').css('overflow','');
+                                    $('.contents,.rolldate-mask').off('touchmove');
+
+                                    bottomBtn.init();
+                                },
+                                cancel: function() {
+                                    $('html,body').css('overflow','');
+                                    $('.contents,.rolldate-mask').off('touchmove');
+                                    $('.j_focus, .j_focus02').removeClass('focus');
+                                }
+                            })
+                        </script>
+                        <!-- //수정가능 -->
+
+                        <!-- 수정불가 -->
+                        <div class="input_form on disabled">
+                            <div class="input_wrap">
+                                <label for="idInput-G6-02" class="input_title j_focus_open">창립일자<span class="required">*</span></label>
+                                <div class="input_txt input_calendar">
+                                    <input id="idInput-G6-02" class="input_data placeholder01 j_input_value j_check_all" readonly="readonly" value="수정불가" disabled="" placeholder="ex) 20201108" onfocus="this.blur()">
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            //달력
+                            new Rolldate({
+                                el: '#idInput-G6-02',
+                                format: 'YYYY-MM-DD',
+                                trigger:'click',
+                                lang: {
+                                    title: '창립일자'
+                                },
+                                //beginYear: 2000,
+                                //endYear: 2100
+                                init: function() {
+                                    $('html,body').css('overflow','hidden');
+                                    $('.contents,.rolldate-mask').on('touchmove',function(e) {e.preventDefault();});
+                                },
+                                moveEnd: function(scroll) {
+                                    
+                                },
+                                confirm: function(date) {
+                                    $(this.config.el).addClass('check_on');
+
+                                    focusMove.init($(this.config.el));
+
+                                    $('html,body').css('overflow','');
+                                    $('.contents,.rolldate-mask').off('touchmove');
+
+                                    bottomBtn.init();
+                                },
+                                cancel: function() {
+                                    $('html,body').css('overflow','');
+                                    $('.contents,.rolldate-mask').off('touchmove');
+                                    $('.j_focus, .j_focus02').removeClass('focus');
+                                }
+                            })
+                        </script>
+                        <!-- //창립일자 -->`
+
+                        <!-- Default -->
+                        <!-- <div class="input_form input_form_sel j_focus">
+                            <div class="input_wrap">
+                                <div class="input_title j_focus_open j_layer_open" layer-target="#layerpopup01">실제소유확인생략법인<span class="required">*</span></div>
+                                <div class="input_select">
+                                    <div id="idInput-G1-01" class="input_data j_check_all j_layer_open" layer-target="#layerpopup01"></div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- //Default -->
+
+                        <!-- 수정가능 -->
+                        <!-- D: input_form에 on 클래스만 추가 -->
+                        <div class="input_form input_form_sel on">
+                            <div class="input_wrap">
+                                <div class="input_title j_focus_open j_layer_open" layer-target="#layerpopup02">실제소유확인생략법인<span class="required">*</span></div>
+                                <div class="input_select">
+                                    <div id="idInput-G1-02" class="input_data j_check_all j_layer_open" layer-target="#layerpopup02">수정가능</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //수정가능 -->
+
+                        <!-- 수정불가 -->
+                        <!-- D: input_form, 모든 j_focus_open에 disabled 클래스 추가 -->
+                        <div class="input_form input_form_sel disabled">
+                            <div class="input_wrap">
+                                <div class="input_title j_focus_open disabled" layer-target="#layerpopup03">실제소유확인생략법인<span class="required">*</span></div>
+                                <div class="input_select">
+                                    <div id="idInput-G1-03" class="input_data j_check_all j_layer_open disabled" layer-target="#layerpopup03">수정불가</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //수정불가 -->
+
+                        <!-- 실소유자명 -->
+                        <div class="input_form input_form_sel j_focus">
+                            <div class="input_wrap">
+                                <label for="idInput-G1-02" class="input_title j_focus_open">실소유자명</label>
+                                <div class="input_txt">
+                                    <input id="idInput-G1-02" class="input_data j_input_value j_check_all" type="text" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //실소유자명 -->
+
+                        <!-- 사업장 전화번호 -->
+                        <div class="input_form j_focus on">
+                            <div class="input_wrap">
+                                <label for="idInput-G1-02" class="input_title j_focus_open">사업장 전화번호<span class="required">*</span></label>
+                                <div class="input_txt">
+                                    <input id="idInput-G1-02" class="input_data j_input_value j_check_all" value="123-456789" type="tel" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //사업장 전화번호 -->
+
+
+                    </div>
+
+                    <div class="btn_wrap btn_fix j_btn_fix" style="display: none;">
+                        <a href="#none" class="btn_type01">다음</a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 실제소유자확인생략법인 -->
+            <div id="layerpopup01" class="layerpopup">
+                <div class="layer_select">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <h5>실제소유자확인생략법인 선택</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide">
+                                    <ul class="select_list j_select">
+                                        <li><a href="#idInput-G1-01">해당사항없음</a></li>
+                                        <li><a href="#idInput-G1-01">국가,지방자치단체(어린이집 제외)</a></li>
+                                        <li><a href="#idInput-G1-01">지방자치단체(단순조회용)</a></li>
+                                        <li><a href="#idInput-G1-01">공공단체</a></li>
+                                        <li><a href="#idInput-G1-01">금융회사</a></li>
+                                        <li><a href="#idInput-G1-01">사업보고서제출</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //실제소유자확인생략법인 -->
+
+            <!-- 실제소유자확인생략법인 -->
+            <div id="layerpopup02" class="layerpopup">
+                <div class="layer_select">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <h5>실제소유자확인생략법인 선택</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide">
+                                    <ul class="select_list j_select">
+                                        <li><a href="#idInput-G1-02">해당사항없음</a></li>
+                                        <li><a href="#idInput-G1-02">국가,지방자치단체(어린이집 제외)</a></li>
+                                        <li><a href="#idInput-G1-02">지방자치단체(단순조회용)</a></li>
+                                        <li><a href="#idInput-G1-02">공공단체</a></li>
+                                        <li><a href="#idInput-G1-02">금융회사</a></li>
+                                        <li><a href="#idInput-G1-02">사업보고서제출</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //실제소유자확인생략법인 -->
+
+            <!-- 실제소유자확인생략법인 -->
+            <div id="layerpopup03" class="layerpopup">
+                <div class="layer_select">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <h5>실제소유자확인생략법인 선택</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide">
+                                    <ul class="select_list j_select">
+                                        <li><a href="#idInput-G1-03">해당사항없음</a></li>
+                                        <li><a href="#idInput-G1-03">국가,지방자치단체(어린이집 제외)</a></li>
+                                        <li><a href="#idInput-G1-03">지방자치단체(단순조회용)</a></li>
+                                        <li><a href="#idInput-G1-03">공공단체</a></li>
+                                        <li><a href="#idInput-G1-03">금융회사</a></li>
+                                        <li><a href="#idInput-G1-03">사업보고서제출</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //실제소유자확인생략법인 -->
+
+            <!-- 시스템 alert 팝업 시작 -->
+            <div class="pop_fixed_wrap popAlert01" name="alertLayerPopup" id="alertLayerPopup" style="display:none;">
+                <section class="pop_wrap square_pop">
+                    <div class="pop_body">
+                        <section>
+                            <div class="container02 p_t30">
+                                <p class="line_h138 fs16 txt_black01" id="alertMessage">dafdfadfadfadfdasfdasfdasfadsfasdfdsfasdffd</p>
+                                <div class="txt_c p_t40 p_b20">
+                                    <a href="javascript:void(0);" class="btn02 fs18 bg_green01 txt_white" id="alertOkButton" onclick="ibk.csw.common.confirmAlert();">확 인</a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <div class="dim"></div>
+            </div>
+            <!-- //시스템 alert 팝업 끝 -->
+            
+            <!-- 시스템 alert 팝업 버튼2개 시작 -->
+            <div class="pop_fixed_wrap popConfirm01" name="confirmLayerPopup" id="confirmLayerPopup" style="display:none;">
+                <section class="pop_wrap square_pop">
+                    <div class="pop_body">
+                        <section>
+                            <div class="container02 p_t30">
+                                <p class="line_h138 fs16 txt_black01" id="confirmMessage"></p>
+                                <div class="txt_c p_t40 p_b20">
+                                    <div class="clearfix">
+                                        <div class="col35 float_l p_r4">
+                                            <a href="javascript:void(0);" class="btn02 col100 fs18 bg_gray01 txt_white" id="confirmCancelButton" onclick="ibk.csw.common.cancelConfirm();">취소</a>
+                                        </div>
+                                        <div class="col65 float_l p_l4">
+                                            <a href="javascript:void(0);" class="btn02 col100 fs18 bg_green01 txt_white" id="confirmOkButton" onclick="ibk.csw.common.runConfirm();">확인</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <div class="dim"></div>
+            </div>
+            <!-- //시스템 alert 팝업 버튼2개 끝 -->
+
+        </div>
+    </body>
+</html>

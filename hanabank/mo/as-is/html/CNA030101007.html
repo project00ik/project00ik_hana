@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-control" content="No-cache">
+    <meta http-equiv="Pragma" content="No-cache">
+    <title>법인비대면실명확인</title>
+    <link rel="stylesheet" href="../css/cna-untact-custom.css">
+    <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+    <script type="text/javascript" src="../js/ui/swiper.js"></script>
+    <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+</head>
+<script>
+    //2021.06.14 Update
+    window.addEventListener('load', function(){
+        
+        setTimeout(function(){
+            $('.wrapper').children('.first_intro').addClass('on');
+        },500);
+
+        setTimeout(function(){
+            $('.wrapper').children('.first_intro').removeClass('on');
+            $('.wrapper').children('.conect_page').animate({opacity:'1'},500);
+        },4800);
+
+        
+    })
+</script>
+<!-- 개발접속 URL -->
+<!-- https://dev11-mbiz.hanabank.com:19190/untact/untact_index.do?nftfChnlKindCd=MW01909A01&CustDvCd=1 -->
+
+<!-- D : 이행목록 (부탁드립니다!)
+    /IBK_CSW_WEB/IBK_CSW_WEB/resource/untact/css/untact-common.css
+    /IBK_CSW_WEB/IBK_CSW_WEB/resource/untact/css/cna-untact-custom.css
+    /IBK_CSW_WEB/IBK_CSW_WEB/resource/untact/images/intro-mockup@2x_2.png
+-->
+
+<body>
+    <div class="wrapper">
+        <!-- 2021.07.26 Update -->
+        <div class="first_intro">
+            <img src="../images/white@2x.png" alt="하나은행" class="logo">
+            <p class="intro_tit">기분 좋은<br />첫 만남
+                <b class="intro_brand">법인 비대면</b>
+            </p>
+            <div class="img_area"><img src="../images/intro-mockup@2x_2.png" alt="img"></div>
+            <span class="progressbar"></span>
+        </div>
+        <!-- //2021.07.26 Update -->
+        <div class="conect_page">
+            <div class="go_center">
+                <p class="intro_tit">
+                    <!-- <span class="intro_logo_wa_00"><img src="../images/intro-logo-wa.png" alt="img"></span> -->
+                    <span class="t_mi">잠깐!</span>준비물 챙기셨나요?
+                </p>
+                <div class="readiness_lists">   
+                    <ul>
+                        <li><span>사업자 공동인증서</span></li> <!-- 2021.04.28 Update --> 
+                        <li>
+                            <span>대표자 신분증
+                                <em>주민등록증, 운전면허증(택1)</em>
+                            </span> <!-- 2021.05.07, 2021.04.28 Update --> 
+                        </li>
+                        <li>
+                            <span class="j_layer_open" layer-target="#layerpopup02">제출서류 안내</span><!-- 210806 Update -->
+                            <!-- 2021.06.22 삭제 
+                            <button type="button" class="btn_type06">자세히보기</button> -->
+                            <!-- 팝업 확인 후 
+                            <button type="button" class="btn_type06 on">자세히보기</button> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="intro_close">Close</button>
+            <p class="guide_txt">서류 재촬영 및 진행상태 조회는<br />"신청결과 조회"에서 가능합니다.</p> <!-- 2021.06.15, 2021.06.10 Update -->
+            <a class="inquire point_position tpye01 j_layer_open" href="#none">신청결과 조회</a>
+            <div class="btn_area">
+                <button type="button" class="ready j_layer_open" layer-target="#layerpopup02">준비했어요</button> <!-- 2021.07.26 Update -->
+            </div>
+        </div>
+
+        <!-- 사업자번호 입력 팝업-->
+        <div class="layerpopup" id="layerpopup01">
+            <div class="layer_center">
+                <div class="layer_contents">
+                    <div class="pop_content">
+                        <p class="ts_l">사업자등록번호를 입력해 주세요.</p> <!-- 2021.06.15 Update -->
+                        <div class="input_form_group j_focus_group on">
+                            <div class="input_form input_form_sub j_focus">
+                                <div class="input_wrap">
+                                    <div class="input_txt">
+                                        <input id="idInput01" class="input_data placeholder02 j_input_value j_check_all" type="number" placeholder="사업자등록번호" /> <!-- 2021.06.15 Update -->
+                                        <button type="button" class="input_data_del j_data_del">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_area last_ck">
+                        <button type="button" class="confirm j_layer_close">확인</button>
+                    </div>
+                    <button type="button" class="layer_close j_layer_close">닫기</button> <!-- 2021.06.03 D:팝업닫기 버튼 추가 -->
+                </div>
+            </div>
+        </div>
+        <!-- //사업자번호 입력 팝업 -->
+
+        <!-- 비대면 실명확인서류 팝업 -->
+        <div class="layerpopup on" id="layerpopup02">
+            <div class="layer_center">
+                <div class="layer_contents">
+                    <!-- 2021.06.14 Update : scroll 수정 -->
+                    <div class="pop_content start_guide j_scroll">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <!-- <h5 class="txt_tit">비대면 실명확인 서류</h5> -->
+                                <div class="txt_cont">
+                                    <p class="list_tit">비대면 실명확인서류</p>
+                                    <ul class="list_dot">
+                                        <li>사업자등록증명원(신청일 포함하여 이후 발급분)</li>
+                                        <li>법인등기사항전부증명서(발급용)<br />(발급Tip : ‘등기기록 전부-유효부분만 열람’, ‘주민등록번호 미공개’로 선택)</li> <!-- 2021.06.15, 2021.06.01 Update -->
+                                    </ul>
+
+                                    <p class="list_tit">금융거래목적 증빙서류(택1)</p>
+                                    <ul class="list_dot">
+                                        <li>부가가치세과세표준증명원</li>
+                                        <!-- <li>부가가치세면세사어자수입금액증명원</li> --> <!-- 2021.05.07 삭제 -->
+                                        <li>표준재무제표증명원</li>
+                                    </ul>
+
+                                    <p class="list_tit">실제소유자확인 서류(택1)</p> <!-- 2021.06.14 Update : 오타수정 -->
+                                    <ul class="list_dot">
+                                        <li>주주명부</li>
+                                        <li>주식등변동상황명세서</li>
+                                    </ul>
+
+                                    <p class="txt_star t_line">서류는 발급일로부터 90일 이내 서류만 유효합니다.<br />(단, 사업자등록증명원은 신청일 포함하여 이후 발급분만 유효)</p>
+                                    <p class="txt_star">공동 대표자는 신청 불가 합니다.</p> <!-- 2021.07.26 Update -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //2021.06.14 Update -->
+                    <div class="btn_area">
+                        <button type="button" class="confirm">확인함</button>
+                    </div>
+                    <button type="button" class="layer_close j_layer_close">닫기</button> <!-- 2021.06.03 D:팝업닫기 버튼 추가 -->
+                </div>
+            </div>
+        </div>
+        <!-- //비대면 실명확인서류 팝업 -->
+    </div>
+        
+</body>
+</html>

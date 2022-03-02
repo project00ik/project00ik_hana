@@ -1,0 +1,344 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header>
+                <button class="back_btn"></button>
+                <p class="h_tit">본인인증</p>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_mi">상품을 체크한 후</span><br />가입해 주세요.</p>
+
+                    <div id="upScroll">
+                        <div class="cna_product_list">
+                            <div class="input_form input_form_sel j_focus">
+                                <div class="input_check">
+                                    <input type="checkbox" id="inputCheck09" class="j_input_check" input-target="" checked />
+                                    <label for="inputCheck09">모두 선택</label>
+                                </div> 
+                            </div>
+                            <ul class="check_list">
+                                <li class="on">
+                                    <a href="#none">
+                                        <strong>기업자유예금</strong>
+                                        예치한도에 제한이 없는<br />
+                                        자유로운 입출금 통장
+                                    </a>
+                                    <button class="popup_open j_layer_open" layer-target="#examLayer">팝업오픈</button>
+                                </li>
+                                <li class="on ui-tbd">
+                                    <a href="#none">
+                                        <strong>외화 다통화계좌</strong>
+                                        예금상품 안내문구 영역
+                                    </a>
+                                    <button class="popup_open">팝업오픈</button>
+                                </li>
+                                <li class="on">
+                                    <a href="#none">
+                                        <strong>연금하나 통장</strong>
+                                        법인사업자용(스마트폰)
+                                    </a>
+                                    <button class="popup_open">팝업오픈</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btn_wrap btn_fix j_btn_fix" style="display: none;">
+                        <a href="#none" class="btn_type01">다음</a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- 상품상세 -->
+        <div class="layerpopup" id="examLayer">
+            <div class="layer_90 tab_layer">
+                <div class="layer_contents">
+                    <div class="pop_tit ">
+                        <h5>급여하나 통장</h5>
+                    </div>
+                    <div class="pop_content j_scroll">
+                        <div class="swiper-wrapper ui-tbd">
+                            <div class="pop_inner swiper-slide">
+                                <p class="content_info">급여이체 하나로~ <br />각종 금융수수료가 면제되는 급여 전용통장</p>
+                                <div class="tab_area">
+                                    <ul class="tabs">
+                                        <li>상품개요</li>
+                                        <li class="on">상품내용</li>
+                                        <li>금리안내</li>
+                                    </ul>
+                                </div>
+                                <div class="tab_cont_area">
+                                    <div class="tabcont img_link type01">
+                                        <!-- <img src="../images/icon-img@2x.png" alt="하나 통장 시리즈 급여 직장인 편"> -->
+                                        <a href="#none"></a>
+                                    </div>
+                                    <div class="tabcont">
+                                        <div class="cont_part">
+                                            <h4>상품특징</h4>
+                                            <p>직장인을 위한 수수료우대 혜택과 만 35세이하 청년직장인에게 특별 우대금리가 제공되는 월급통장</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>가입대상</h4>
+                                            <p>실명의 개인 또는 개인사업자(1인 1계좌)</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>예금종류</h4>
+                                            <p>저축예금</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>전환여부</h4>
+                                            <p>저축예금에 한하여 동 상품으로 전환가능 <br />
+                                                (단, 기존 수수료면제통장에서 전환 시 수수료면제횟수는 해당월은 기존상품의 잔여횟수를 적용하고, 다음달부터는 동 상품의 실적에 따라 수수료면제횟수 적용)</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>청년직장인 우대금리</h4>
+                                            <p>만35세이하 급여이체 직장인 대상 1백만원까지 연1.40%
+                                                (2019.3.16 현재, 세전)</p>
+                                            <div class="txt_cont mt10">
+                                                <ul class="list_dot">
+                                                    <li>제공대상 : 만35세 이하 고객으로, 매 결산월(3,6,9,12월)의 전월말일 또는 해지일 전월말일 기준, 과거 3개월동안 2개월이상 이 통장에 급여(주1)가 입금되는 경우</li>
+                                                    <li>제공내용 : 해당 이자계산기간내 매일의 최종잔액 중 1백만원 까지 연 1.40% 추가제공</li>
+                                                    <li>제공기간 : 해당 고객이 만35세 초과후 첫번째 도래되는 결산시까지 제공</li>
+                                                </ul>
+                                            </div>
+                                            <div class="notice type_inpopup">
+                                                <p class="tit">알아두세요</p>
+                                                <ul class="list_dot mt10">
+                                                    <li>1백만원 초과 금액은 우대금리 미제공</li>
+                                                    <li>다른 통장에서 이 통장으로 전환하는 경우에는 전환일부터 이 통장의 금리를 적용함</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>수수료 우대 서비스</h4>
+                                            <p>아래의 제공조건을 충족하는 경우 충족월 다음달에 수수료우대서비스를 제공합니다. <br />
+                                                (이 통장을 통한 거래에 한 하여 제공)</p>
+                                            <table class="mt10 type_col">
+                                                <colgroup>
+                                                    <col style="width: 30%;">
+                                                    <col style="width: 35%;">
+                                                    <col style="width: 35%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>구분</th>
+                                                        <th>제공조건(주1)</th>
+                                                        <th>제공조건(주2)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>급여하나<br />우대</td>
+                                                        <td class="left">이 통장에 급여 입금</td>
+                                                        <td class="left">수수료우대Ⅰ (무제한) + 수수료우대Ⅱ (월5회)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>급여플러스<br />우대</td>
+                                                        <td class="left">이 통장에 급여입금+주거래이체실적1건이상</td>
+                                                        <td class="left">수수료우대Ⅰ (무제한) + 수수료우대Ⅱ (월10회)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="table_tit ">(주1) 제공조건 인정 기준</p>
+                                            <table class="mt10 type_row">
+                                                <colgroup>
+                                                    <col style="width: 30%;">
+                                                    <col style="width: 70%;">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">급여 입금</th>
+                                                        <td class="left">타인으로부터 건당 50만원 이상 입금 (급여적요 포함 입금 또는 급여지정일 전후 1영업일내 입금)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">주거래<br />이체실적</th>
+                                                        <td class="left">하나은행에서 가입한 본인명의 연금상품 (연금펀드, 연금신탁, 연금보험) 이체, 아파트관리비 출금)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="table_tit ">(주2) 우대수수료 내용</p>
+                                            <table class="mt10 type_col">
+                                                <colgroup>
+                                                    <col style="width: 45%;">
+                                                    <col style="width: 55%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>수수료우대 I</th>
+                                                        <th>수수료우대 Ⅱ</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="left">
+                                                            ① 당행 자동화기기를 통한 마감 후 현금인출 수수료 면제 <br />
+                                                            ② 당행 자동화기기를 통한 타행이체 수수료 면제<br />
+                                                            ③ 인터넷뱅킹, 폰뱅킹(ARS), 스마트폰뱅킹을 통한 타행이체 수수료 면제<br />
+                                                            ④ 납부자자동이체 및 타행자동이체 수수료 면제
+                                                        </td>
+                                                        <td class="left">
+                                                            ① 타행 자동화기기*를 통한 현금 인출 수수료 면제<br />
+                                                            ② 창구 타행이체 수수료 면제<br />
+                                                            * CD기 공동망 참여 금융회사로 타행 점내 설치된 자동화기기에 한해 서비스 제공. 은행 외부 설치된 CD기 및 한컴/효성/나이스 등 VAN사 CD기 출금하는 경우 수수료우대 없음
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p>※ 이 통장을 신규 가입후 다음달 말일까지는 제공조건 충족여부와 관계없이 수수료우대 I 를 총합 월 10회 제공합니다.</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>직장인 응원 서비스</h4>
+                                            <p>직장인 응원서비스를 신청하는 경우, 수수료우대 I (무제한) 및 수수료우대 II 서비스(총합 월5회) 를 신청일로 부터 6개월이 종료하는 달까지 제공합니다. <br />
+                                                (이 통장을 통한 거래에 한 하여 제공)</p>
+                                            <div class="txt_cont mt10">
+                                                <ul class="list_dot">
+                                                    <li>신청대상 : 휴직(육아/인병), 퇴직한 고객이 사유 발생월 전월 기준으로 과거 3개월동안 2개월이상 이 통장에 급여입금실적(주1)이 있는 경우</li>
+                                                    <li>신청방법 : 휴직/퇴직후 3개월이내 영업점 창구를 통해 사유별 증빙서류 제출(증빙서류(예시) : 육아휴직 또는 인병휴직 확인서, 퇴직증명서 등 확인 가능한 서류)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>세제혜택</h4>
+                                            <p>개인의 경우 비과세종합저축 가능 (전 금융기관 통합한도 범위내)</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>유의사항</h4>
+                                            <div class="txt_cont mt10">
+                                                <ul class="list_dot">
+                                                    <li>청년 직장인 우대금리”는 급여입금실적을 충족하는 만35세이하 고객에 한하여 제공됩니다.</li>
+                                                    <li>수수료우대서비스는 이 예금에 의한 거래에만 적용되며, 매월 요건 충족여부를 확인하여 다음월에 수수료우대 서비스를 제공합니다.</li>
+                                                    <li>우대금리, 우대서비스 내용 및 대상 요건은 변경 가능하며, 변경 시 재고시 합니다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>상품내용 변경에 관한 사항</h4>
+                                            <table class="mt10 type_row">
+                                                <colgroup>
+                                                    <col style="width: 30%;">
+                                                    <col style="width: 70%;">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">상품내용 변경에 <br />
+                                                            관한 사항 <br />
+                                                            (2019.3.16 변경)</th>
+                                                        <td class="left">
+                                                            <p class="t_mi">&lt;기본금리 적용방식 변경&gt;</p>
+                                                            <dl>
+                                                                <dt>변경 전</dt>
+                                                                <dd>우대금리 제공구간에는 기본금리 미제공</dd>
+                                                                <dt>변경 후</dt>
+                                                                <dd>우대금리 제공구간에도 기본금리 제공</dd>
+                                                            </dl>
+                                                            <p class="t_mi">&lt;우대금리 변경&gt;</p>
+                                                            <dl>
+                                                                <dt>변경 전</dt>
+                                                                <dd>연 1.50%</dd>
+                                                                <dt>변경 후</dt>
+                                                                <dd>연 1.40%</dd>
+                                                            </dl>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="tabcont">
+                                        <div class="cont_part">
+                                            <h4>기본금리</h4>
+                                            <table class="mt10 type_col">
+                                                <colgroup>
+                                                    <col style="width: 50%;">
+                                                    <col style="width: 50%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>금액</th>
+                                                        <th>금리(연율,세전)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>5천만원 미만</td>
+                                                        <td>0.1%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5천만원 이상</td>
+                                                        <td>0.2%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="norm">(2019~03.12 기준, 세전)</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>청년직장인 우대금리</h4>
+                                            <p>만35세이하 급여이체 직장인 대상 1백만원까지 연1.40%
+                                                (2019.3.16 현재, 세전)</p>
+                                            <div class="txt_cont mt10">
+                                                <ul class="list_dot">
+                                                    <li>제공대상 : 만35세 이하 고객으로, 매 결산월(3,6,9,12월)의 전월말일 또는 해지일 전월말일 기준, 과거 3개월동안 2개월이상 이통장에 급여(주1)가 입금되는 경우</li>
+                                                    <li>제공내용 : 해당 이자계사기간내 매일의 최종잔액 중 1백만원 까지 연 1.40% 추가제공</li>
+                                                    <li>제공기간 : 해당 고객이 만35세 초과후 첫번째 도래되는 결산시까지 제공</li>
+                                                </ul>
+                                            </div>
+                                            <div class="notice type_inpopup">
+                                                <p class="tit">알아두세요</p>
+                                                <ul class="list_dot mt10">
+                                                    <li>1백만원 초과 금액은 우대금리 미제공</li>
+                                                    <li>다른 통장에서 이 통장으로 전환하는 경우에는 전환일부터 이 통장의 금리를 적용함</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="client_safely">
+                                    <p class="tit">예금자 보호</p>
+                                    <p class="kdic_mark">이 예금은 예금자 보호법에 따라, 예금보험공사가 보호한도는 본 은행에 있는 귀하의 모든 예금대상 금융상품의 원금과 소정의 이자를 합하여 1인당 “최고 5천만원”이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>
+                                    <p class="kdic">준법감시인 심사필 2019-상품-1051호(2019.03.15) <br />
+                                        본 공시내용의 유효기간 : 2019.03.15 ~ 2022.03.14 <br />
+                                        기준일 : 2019년 03월 16일</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_fix_area last_ck">
+                        <button type="button" class="pop_btn01 j_layer_close word_space15 confirm">가 <span>입</span></button>
+                    </div>
+                    <button type="button" class="cancel j_layer_close">취소</button>
+                </div>
+            </div>
+        </div>
+        <!-- //상품상세 -->
+
+        <script>
+            $(window).load(function(){
+                layerOpen.init('#examLayer');
+            })
+        </script>
+    </body>
+</html>

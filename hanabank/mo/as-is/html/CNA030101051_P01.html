@@ -1,0 +1,63 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header>
+                <button class="back_btn"></button>
+                <p class="h_tit">본인인증</p>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+       <!-- 상품 선택 -->
+        <div class="layerpopup" id="layerpopup01">
+            <div class="layer_center">
+                <div class="layer_contents">
+                    <div class="pop_content">
+                        <p>하나은행은 고객등록에 필요한 일부 입력항목을 NICE사 기업정보 데이터(KIS-DATA)를 활용해 손쉽게 불러올 수 있습니다.</p> <!-- 2021.06.01, 2021.05.07 Update -->
+                        <p class="mt15">해당 서비스를 사용하여 법인 사업자 정보를<br />불러오시겠습니까?</p>
+                        <p class="mt15">(불러온 정보는 실제 입력화면에서 수정 가능합니다.)</p> <!-- 2021.05.26 Update -->
+
+
+                        <div class="nice_logo"></div> <!-- 2021.05.07 Update -->
+                    </div>
+                    <div class="btn_area btn_02 cna_btn_37"> <!-- 2021.05.18 Update -->
+                        <button type="button" class="cancel j_layer_close">아니오</button>
+                        <button type="button" class="confirm j_layer_close">예</button>
+                    </div>
+                    <button type="button" class="layer_close j_layer_close">닫기</button> <!-- 2021.06.03 D:팝업닫기 버튼 추가 -->
+                </div>
+            </div>
+        </div>
+        <!-- //상품 선택 -->
+        <script>
+            $(window).load(function(){
+                layerOpen.init('#layerpopup01');
+            })
+        </script>
+    </body>
+</html>

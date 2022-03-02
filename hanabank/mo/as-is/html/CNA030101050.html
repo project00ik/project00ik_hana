@@ -1,0 +1,171 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header>
+                <button class="back_btn"></button>
+                <p class="h_tit">사전 체크리스트</p> 
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div> 
+                    <p class="pages_tit"><span class="t_mi">사전 체크리스트</span>를 <br />확인해 주세요.</p>
+
+                    <div id="upScroll" class="input_form_group j_focus_group on">
+                        <div class="guide_info_list pt0">
+                            <ul class="list_dot">
+                                <li>아래 문항은 법인 비대면 실명확인 서비스를 사용할 수 있는 법인 및 대표자의 자격에 대한 사전 안내입니다.</li>
+                                <!-- <li>모두 ‘예’일 경우에 진행 가능합니다.</li> 2021.04.28 Update 삭제 --> 
+                                <li>아래 항목 외에 다른 사유로 진행이 불가할 수 있습니다.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 2021.06.25 원복, 2021.06.17 Update [D] : 넘버링 추가 및 라디오값 전체 default NULL -->
+
+                        <!-- Question 1 -->
+                        <div class="input_form">
+                            <p class="question">1. 귀하의 법인은 주식회사입니까?</p> <!-- 2021.06.17 Update -->
+                            <div class="hbox_form">
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G1" id="inputRadio-G1-01" class="j_input_check" checked /> <!-- 2021.06.17 Update -->
+                                    <label for="inputRadio-G1-01">예</label>
+                                </div>
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G1" id="inputRadio-G1-02" class="j_input_check" />
+                                    <label for="inputRadio-G1-02">아니오</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Question 1 -->
+
+                        <!-- Question 2 -->
+                        <div class="input_form">
+                            <p class="question">2. 귀하의 법인은 국내 소재 중소기업으로, 본점입니까?</p> <!-- 2021.06.17 Update -->
+                            <div class="hbox_form">
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G2" id="inputRadio-G2-01" class="j_input_check" checked /> <!-- 2021.06.17 Update -->
+                                    <label for="inputRadio-G2-01">예</label>
+                                </div>
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G2" id="inputRadio-G2-02" class="j_input_check" />
+                                    <label for="inputRadio-G2-02">아니오</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Question 2 -->
+
+                        <!-- Question 3 -->
+                        <div class="input_form">
+                            <p class="question">3. 귀하의 법인은 최근 1년 매출액 1백만원 이상 발생하고 있습니까?</p> <!-- 2021.06.17, 2021.06.04 Update -->
+                            <div class="hbox_form">
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G3" id="inputRadio-G3-01" class="j_input_check" checked="checked" /> <!-- 2021.06.25, 2021.06.17 Update -->
+                                    <label for="inputRadio-G3-01">예</label>
+                                </div>
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G3" id="inputRadio-G3-02" class="j_input_check" />
+                                    <label for="inputRadio-G3-02">아니오</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Question 3 -->
+
+                        <!-- Question 4 -->
+                        <div class="input_form">
+                            <p class="question">4. 귀하의 법인은 가상통화를 취급하지 않고 있습니까?</p> <!-- 2021.06.17 Update -->
+                            <div class="hbox_form">
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G4" id="inputRadio-G4-01" class="j_input_check" checked="checked" /> <!-- 2021.06.25, 2021.06.17 Update -->
+                                    <label for="inputRadio-G4-01">예</label>
+                                </div>
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G4" id="inputRadio-G4-02" class="j_input_check" />
+                                    <label for="inputRadio-G4-02">아니오</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Question 4 -->
+
+                        <!-- 2021.06.04 Update -->
+                        <!-- Question 7 -->
+                        <div class="input_form">
+                            <p class="question">5. 귀하의 법인은 사업자 명의 입출금계좌를 보유하고 있습니까?</p> <!-- 2021.06.17 Update -->
+                            <div class="hbox_form">
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G7" id="inputRadio-G7-01" class="j_input_check" checked="checked" /> <!-- 2021.06.25, 2021.06.17 Update -->
+                                    <label for="inputRadio-G7-01">예</label>
+                                </div>
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G7" id="inputRadio-G7-02" class="j_input_check" />
+                                    <label for="inputRadio-G7-02">아니오</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Question 7 -->
+                        <!-- //2021.06.04 Update -->
+
+                        <!-- Question 5 -->
+                        <div class="input_form">
+                            <p class="question">6. 귀하의 법인 대표자는 단독 대표자인 한국인입니까?</p> <!-- 2021.06.17 Update -->
+                            <div class="hbox_form">
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G5" id="inputRadio-G5-01" class="j_input_check" checked="checked" /> <!-- 2021.06.25, 2021.06.17 Update -->
+                                    <label for="inputRadio-G5-01">예</label>
+                                </div>
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G5" id="inputRadio-G5-02" class="j_input_check" />
+                                    <label for="inputRadio-G5-02">아니오</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Question 5 -->
+
+                        <!-- Question 6 -->
+                        <div class="input_form">
+                            <p class="question">7. 귀하의 법인 대표자는 법인 주식의 25% 이상 최대주식을 소유한 실제소유자 입니까?</p> <!-- 2021.06.17, 2021.05.07 Update -->
+                            <div class="hbox_form">
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G6" id="inputRadio-G6-01" class="j_input_check" checked="checked" /> <!-- 2021.06.25, 2021.06.17 Update -->
+                                    <label for="inputRadio-G6-01">예</label>
+                                </div>
+                                <div class="input_radio">
+                                    <input type="radio" name="inputRadio-G6" id="inputRadio-G6-02" class="j_input_check" />
+                                    <label for="inputRadio-G6-02">아니오</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Question 6 -->
+
+                        <p class="quest_desc mt10">※ 외국인이나 국외법인이 지분율 25%이상을 소유한 법인은 비대면 실명확인 대상에서 제외됩니다.</p> <!-- 2021.06.17 Update -->
+                        <p class="quest_desc">위 내용을 모두 확인하였으며, 모두 ‘예’에 해당하는 법인만 신청 가능합니다.</p> <!-- 2021.06.17 Update -->
+
+                    </div>
+
+                    <div class="btn_wrap btn_fix">
+                        <a href="#none" class="btn_type01">확인</a>
+                    </div>
+                </section>
+            </div>
+            
+        </div>
+    </body>
+</html>

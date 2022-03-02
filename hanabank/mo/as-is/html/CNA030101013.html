@@ -1,0 +1,112 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header>
+                <button class="back_btn"></button>
+                <p class="h_tit">사업자 및 법인 정보 투입</p> <!-- 2021.04.27, 21.04.16 Update -->
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_mi">사업자 및<br />법인정보</span>를 <br />입력해 주세요.</p> <!-- 21.04.16 Update -->
+
+                    <div id="upScroll" class="input_form_group j_focus_group on">
+
+                        <!-- 2021.04.27 Update -->
+                        <!-- 사업자등록번호 -->
+                        <div class="input_form input_form_sel disabled j_holdOn">
+                            <div class="input_wrap">
+                                <div class="input_title">사업자등록번호</div> <!-- 2021.06.01 Update -->
+                                <div class="input_layer">
+                                    <div class="input_data">123-45-67890</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //사업자등록번호 -->
+                        <!-- //21.04.27 Update -->
+
+                        <!-- 21.04.16 Update -->
+                        <!-- 사업자명 -->
+                        <div class="input_form j_focus on">
+                            <div class="input_wrap">
+                                <label for="idInput01" class="input_title j_focus_open">사업자명</label>
+                                <div class="input_txt">
+                                    <input id="idInput01" class="input_data j_input_value j_check_all" value="하나기업" type="text" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <p class="txt_notice02">정확한 사업자명을 입력해 주세요.</p> --> <!-- 2021.07.01 항목 삭제, 2021.06.17 Update -->
+                        <!-- //사업자명 -->
+                        <!-- //21.04.16 Update -->
+
+                        <!-- 법인등록번호 -->
+                        <div class="input_form j_focus">
+                            <div class="input_wrap">
+                                <label for="idInput03" class="input_title j_focus_open">법인등록번호</label>  <!-- 2021.06.01 Update -->
+                                <div class="input_txt">
+                                    <input id="idInput03" class="input_data j_input_value j_check_all" type="number" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //법인등록번호 -->
+                    </div>
+
+                    <!-- 2021.04.28 Update 사업자등록증명원 발급번호,법인등기사항전부증명서 발급번호,금융거래목적증빙 서류 발급번호 삭제 -->
+
+
+                    <div class="btn_wrap btn_fix j_btn_fix" style="display: none;">
+                        <a href="#none" class="btn_type01">확인</a>
+                    </div> 
+                </section>
+            </div>
+
+            <!-- 만기해지 방법 -->
+            <div id="layerpopup01" class="layerpopup">
+                <div class="layer_select">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <h5>금융거래목적증빙 서류 발급번호</h5>
+                        </div>  
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide">
+                                    <ul class="select_list j_select">
+                                        <li><a href="#idInput06">표준재무제표증명원</a></li>
+                                        <li><a href="#idInput06">부과세증명원</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //만기해지 방법 -->
+
+            <!-- 2021.04.28 Update 사업자등록증명원 발급번호,법인등기사항전부증명서 발급번호,금융거래목적증빙 서류 발급번호 삭제 -->
+
+        </div>
+    </body>
+</html>

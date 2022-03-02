@@ -1,0 +1,170 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper"> <!-- 2021.06.08 Update -->
+            <header>
+                <button class="back_btn"></button>
+                <p class="h_tit">신청결과</p>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot" style="visibility: hidden;">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <!-- 2021.06.04 Update -->
+                    <p class="pages_tit"><span class="t_de">신청중인 상품</span>이<br />있습니다.</p>
+                    <!-- <p class="pages_tit"><span class="t_de">신청중인 상품이<br><span class="color01"><em class="t_de number">1</em>건</span> 있습니다.</span></p> -->
+                    <!-- //2021.06.04 Update -->
+
+                    <!-- 신청 목록 -->
+                    <div class="applying_products"> 
+                        <ul class="applying_list">
+                            <li>
+                                <span class="result complete">완료</span>
+                                <span class="date">2019.11.27</span>
+                                <strong class="applied_Number">신청번호 <span>[20200312885632]</span></strong>
+                                <ul class="list_dot">
+                                    <li>하나멤버스 주거래 통장</li>
+                                    <li>하나멤버스 우대적금</li>
+                                    <li>전자금융(개인뱅킹)</li>
+                                </ul>
+                                <button type="button" class="move_to" onclick="layerOpen.init('#layerpopup01');">이동</button>
+                            </li>
+                            <li>
+                                <span class="result ing">처리중</span>
+                                <span class="date">2019.11.28</span>
+                                <strong class="applied_Number">신청번호 <span>[20200312885632]</span></strong>
+                                <ul class="list_dot">
+                                    <li>e-플러스 정기예금 전자금융</li>
+                                </ul>
+                                <button type="button" class="move_to">이동</button>
+                            </li>
+                            <li>
+                                <span class="result ing2">신청중</span>
+                                <span class="date">2019.11.30</span>
+                                <strong class="applied_Number">신청번호 <span>[20200312885632]</span></strong>
+                                <ul class="list_dot">
+                                    <li>e-플러스 정기예금 전자금융</li>
+                                </ul>
+                                <button type="button" class="move_to">이동</button>
+                                <div class="btn_wrap hbox">
+                                    <button type="button" class="btn_type07 gray">신청취소</button>
+                                    <button type="button" class="btn_type07">이어하기</button>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="result fail">실패</span>
+                                <span class="date">2019.11.29</span>
+                                <strong class="applied_Number">신청번호 <span>[20200312885632]</span></strong>
+                                <ul class="list_dot">
+                                    <li>실명 확인 요청</li>
+                                </ul>
+                                <button type="button" class="move_to">이동</button>
+                            </li>
+                            <li>
+                                <span class="result cancel">신청취소</span>
+                                <span class="date">2019.11.31</span>
+                                <strong class="applied_Number">신청번호 <span>[20200312885632]</span></strong>
+                                <ul class="list_dot">
+                                    <li>전자금융(기업뱅킹)</li>
+                                </ul>
+                                <button type="button" class="move_to">이동</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //신청 목록 -->
+
+                    <!-- 2021.07.13 Update -->
+                    <div class="btn_wrap hbox btn_fix">
+                        <a href="#none" class="btn_type01">하나원큐기업 메인</a>
+                        <a href="#none" class="btn_type01">계좌개설 첫 화면</a>
+                    </div>
+                    <!-- //2021.07.13 Update -->
+
+                </section>
+            </div>
+            <!-- 상품가입 처리 결과 팝업 -->
+            <div class="layerpopup" id="layerpopup01">
+                <div class="layer_90">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <div class="current_result_info">
+                                <h5>2020년 2월 5일<br>신청한 결과입니다.</h5>
+                                <p>최종처리일 : <span class="color01 t_de">2020.02.05</span></p>
+                            </div>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide">
+                                    <div class="applied_result">
+                                        <ul>
+                                            <li class="completed">
+                                                <strong>완료</strong>
+                                                <span><a href="#none" class="j_layer_open" layer-target="#layerpopup02">하나멤버스 주거래 통장</a></span>
+                                            </li> 
+                                            <li class="waiting2">
+                                                <strong>대기</strong>
+                                                <span>하나멤버스 우대적금 상품명이 두줄인 경우는 요로케</span>
+                                            </li>
+                                            <li class="failed">
+                                                <strong>실패</strong>
+                                                <span>전자금융(개인뱅킹)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="self_checking_result">
+                                        <h6>본인인증 처리결과</h6>
+                                        <div class="type_list">
+                                            <ul>
+                                                <li>신분증 진위확인
+                                                    <span class="completed">완료</span>
+                                                </li>
+                                                <li>대표자 실명확인
+                                                    <span class="completed">완료</span>
+                                                </li>
+                                                <li>사업자 실명확인
+                                                    <span class="completed">완료</span>
+                                                </li>
+                                                <li>실제 소유자확인
+                                                    <span class="completed">완료</span>
+                                                </li>
+                                                <li>금융거래목적 증빙확인
+                                                    <span class="completed">완료</span>
+                                                </li>
+                                                <li>
+                                                    <a href="#none"><em>인증번호 확인</em>
+                                                        <span class="completed">완료</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button> <!-- 2021.06.01 Uadate -->
+                    </div>
+                </div>
+            </div>
+            <!-- //상품가입 처리 결과 팝업 -->
+        </div>
+    </body>
+</html>

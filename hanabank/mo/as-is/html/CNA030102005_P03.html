@@ -1,0 +1,250 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header>
+                <button class="back_btn"></button>
+                <p class="h_tit">신청결과</p>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot" style="visibility: hidden;">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_de">신청중인 상품이<br><span class="color01"><em class="t_de number">2</em>건</span> 있습니다.</span></p>
+
+                    <div id="upScroll" class="input_form_group j_focus_group on"></div> <!-- 2021.06.07 Update -->
+                </section>
+            </div>
+
+            <!-- 요구불/외환 상품 신청 -->
+            <div id="layerpopup01" class="layerpopup">
+                <div class="layer_center">
+                    <div class="layer_contents">
+                        <div class="pop_tit type02">
+                            <h5>가입신청 완료</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="txt_cont">
+                                        <ul class="finished_result_info">
+                                            <li>
+                                                <strong>상품명</strong>
+                                                <span>e-플러스 통장</span>
+                                            </li>
+                                            <li>
+                                                <strong>계좌번호</strong>
+                                                <span>111 - 111111 - 111</span>
+                                            </li>
+                                            <li>
+                                                <strong>(현재)적용금리<br />(우대금리포함)</strong>
+                                                <span>0.1%</span>
+                                            </li>
+                                            <!-- 2021.06.24 Update -->
+                                            <li>
+                                                <strong>(현재)적용금리<br />(우대금리포함)</strong>
+                                                <ul class="cna_info_list">
+                                                    <li><span>거주자 <em>0.001%</em></span></li>
+                                                    <li><span>비거주자 <em>0.001%</em></span></li>
+                                                </ul>
+                                            </li>
+                                            <!-- //2021.06.24 Update -->
+                                            <li>
+                                                <strong>처리완료일</strong>
+                                                <span>2017.02.09</span>
+                                            </li>
+                                            <li>
+                                                <strong>관리점</strong>
+                                                <span>하나하나 점</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="txt_notice j_toggle s-size">
+                                        <button type="button" class="txt_notice_open j_toggle_open">알아두세요</button>
+                                        <div class="txt_notice_cont j_toggle_cont">
+                                            <ul class="list_type01">
+                                                <li>금융회사는 <strong>「금융소비자보호에 관한 법률(시행일 2021.03.25)」  제23조(계약서류의 제공의무)</strong>를 준수하며 주요 계약 서류는 계약체결 완료 후 이메일로 제공됩니다.</li>
+                                                <!-- <li>계약정보 실시간 조회는 (하나원큐>계좌조회>계좌관리>계좌정보)에서 가능합니다.</li> --><!-- 2021.06.04 Update -->
+                                                <li>적용금리는 현재시점 기준이며, 실제 기본(우대)이율의 적용은 제공받으신 약관,설명서에 따릅니다.</li>
+                                                <li>연계&middot;제휴서비스 등은 해당 상품의 약관,설명서에 따릅니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_area">
+                            <button type="button" class="confirm j_layer_close">확인</button>
+                        </div>
+                        <button type="button" class="layer_close j_layer_close">닫기</button> <!-- 2021.06.03 D:팝업닫기 버튼 추가 -->
+                    </div>
+                </div>
+            </div>
+            <!-- //요구불/외환 상품 신청 -->
+
+            <!-- 전자금융 신청 -->
+            <div id="layerpopup02" class="layerpopup">
+                <div class="layer_center">
+                    <div class="layer_contents">
+                        <div class="pop_tit type02">
+                            <h5>가입신청 완료</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="txt_cont">
+                                        <ul class="finished_result_info">
+                                            <li>
+                                                <strong>상품명</strong>
+                                                <span>전자금융(개인뱅킹)</span>
+                                            </li>
+                                            <li>
+                                                <strong>ID</strong>
+                                                <span>HANAHANA</span>
+                                            </li>
+                                            <li>
+                                                <strong>보안매체</strong>
+                                                <span>보유OTP</span>
+                                            </li>
+                                            <li>
+                                                <strong>1일 이체한도</strong>
+                                                <span>500,000,000 원</span>
+                                            </li>
+                                            <li>
+                                                <strong>1회 이체한도</strong>
+                                                <span>500,000,000 원</span>
+                                            </li>
+                                            <li>
+                                                <strong>출금계좌 <span class="color01">(6)</span></strong>
+                                                <span>111-111111-111
+                                                    <button type="button" class="toggle_btn">더보기</button>
+                                                </span>
+                                                <ul class="account_list">
+                                                    <li>111-111111-111</li>
+                                                    <li>111-111111-111</li>
+                                                    <li>111-111111-111</li>
+                                                    <li>111-111111-111</li>
+                                                    <li>111-111111-111</li>
+                                                </ul>
+                                                <style>
+                                                </style>
+                                            </li>
+                                            <li>
+                                                <strong>처리완료일</strong>
+                                                <span>2017-02-09</span>
+                                            </li>
+                                            <li>
+                                                <strong>관리점</strong>
+                                                <span>서초남지점</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_area">
+                            <button type="button" class="confirm j_layer_close">확인</button>
+                        </div>
+                        <button type="button" class="layer_close j_layer_close">닫기</button> <!-- 2021.06.03 D:팝업닫기 버튼 추가 -->
+                    </div>
+                </div>
+            </div>
+            <!-- //전자금융 신청 -->
+
+            <!-- 1원 인증 완료 -->
+            <div id="layerpopup03" class="layerpopup">
+                <div class="layer_center">
+                    <div class="layer_contents">
+                        <div class="pop_tit type02">
+                            <h5>인증번호 확인 완료</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="txt_cont">
+                                        <ul class="finished_result_info">
+                                            <li>
+                                                <strong>인증번호 발송계좌</strong>
+                                                <span>신한은행<br />000-000000-00000</span>
+                                            </li>
+                                            <li>
+                                                <strong>완료일시</strong>
+                                                <span>2017.02.20 13:22</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_area">
+                            <button type="button" class="confirm j_layer_close">확인</button>
+                        </div>
+                        <button type="button" class="layer_close j_layer_close">닫기</button> <!-- 2021.06.03 D:팝업닫기 버튼 추가 -->
+                    </div>
+                </div>
+            </div>
+            <!-- //1원 인증 완료 -->
+
+            <!-- 당행계좌 검증 완료 -->
+            <div id="layerpopup04" class="layerpopup">
+                <div class="layer_center">
+                    <div class="layer_contents">
+                        <div class="pop_tit type02">
+                            <h5>당행계좌 검증 완료</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="txt_cont">
+                                        <ul class="finished_result_info">
+                                            <li>
+                                                <strong>출금계좌</strong>
+                                                <span>신한은행<br />000-000000-00000</span>
+                                            </li>
+                                            <li>
+                                                <strong>완료일시</strong>
+                                                <span>2017.02.20 13:22</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_area">
+                            <button type="button" class="confirm j_layer_close">확인</button>
+                        </div>
+                        <button type="button" class="layer_close j_layer_close">닫기</button> <!-- 2021.06.03 D:팝업닫기 버튼 추가 -->
+                    </div>
+                </div>
+            </div>
+            <!-- //당행계좌 검증 완료 -->
+
+            
+
+        </div>
+
+        <script>
+            $(window).load(function(){
+                layerOpen.init('#layerpopup01');
+            })
+        </script>
+    </body>
+</html>

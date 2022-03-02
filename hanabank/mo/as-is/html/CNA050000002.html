@@ -1,0 +1,98 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <button class="back_btn"></button>
+                <!-- <h2 class="h_tit">주민등록증 촬영</h2> --> <!-- 2021.05.24 Update -->
+                <!-- <button class="h_menu"></button> -->
+            </header>
+            <div class="contents"> <!-- 2021.07.15 Update -->
+                <section class="picture_guide">
+                    <div class="picture_area type01">
+                        <img src="../images/sample-id@2x.png" alt="사진" />
+                    </div>
+                    <div class="guide_notice">
+                        <ul>
+                            <li>가이드에<br>맞춰주세요.</li> <!-- 2021.05.26 Update -->
+                            <li>어두운 배경에서<br />촬영하세요.</li>
+                            <li>빛 반사에<br />주의하세요.</li>
+                        </ul>
+                    </div>
+                    <div class="guide_info_list">
+                        <ul class="list_dot">
+                            <li>복사본이나 사진은 사용할 수 없습니다. <br />
+                                <em class="accent color01">신분증 원본으로 촬영하세요.</em>
+                            </li>
+                            <li>정보 확인이 어렵거나 훼손된 신분증은 거래가 거절 될 수 있습니다.</li>
+                            <!-- 2021.06.17 Update -->
+                            <li>2014년 07월 02일 부터 운전면허증에 지역명 대신 지역에 따른 숫자를 표기하는 제도 시행으로 면허번호가 12자리인 숫자만 촬영가능합니다.</li>
+                            <li>지역명+면허번호 10자리 운전면허를 소지하신 손님께서는 주민등록증으로 촬영해 주세요.</li>
+                            <!-- //2021.06.17 Update -->
+                        </ul>
+                    </div>
+                    <div class="btn_wrap btn_fix ">
+                        <a href="#none" class="btn_type01">촬영</a>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- Layer Popup  -->
+        <div class="layerpopup" id="layerpopup01">
+            <div class="layer_center">
+                <div class="layer_contents">
+                    <div class="pop_content">
+                        <p>신분증 인식이 실패하였습니다.<br />아래내용 확인 후 다시 촬영해주세요.</p> <!-- 2021.06.16 Update -->
+                        <ul class="list_num small">
+                            <li>신분증 원본 촬영</li>
+                            <li>신분증을 어두운 바탕에 놓고 촬영</li>
+                            <li>빛 번짐과 흔들림이 없는지 확인</li>
+                            <li>촬영 장소가 너무 어둡거나 밝다면 장소를 이동</li>
+                        </ul>
+                    </div>
+                    <div class="btn_area">
+                        <button type="button" class="confirm j_layer_close">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Layer Popup  -->
+
+        <!-- Layer Popup  -->
+        <div class="layerpopup" id="layerpopup02">
+            <div class="layer_center">
+                <div class="layer_contents">
+                    <div class="pop_content">
+                        <p>재외국민은 비대면실명확인 서비스를 이용하실 수 없습니다. <br />
+                            영업점을 방문하여 거래해 주세요.</p>
+                    </div>
+                    <div class="btn_area">
+                        <button type="button" class="confirm j_layer_close">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Layer Popup  -->
+
+    </body>
+
+</html>

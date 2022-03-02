@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-control" content="No-cache">
+    <meta http-equiv="Pragma" content="No-cache">
+    <title>법인비대면실명확인</title>
+    <link rel="stylesheet" href="../css/cna-untact-custom.css">
+    <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+    <script type="text/javascript" src="../js/ui/swiper.js"></script>
+    <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+</head>
+<body>
+<div class="wrapper main">
+    <header>
+        <button class="back_btn"></button>
+        <p class="h_tit">상품선택</p>
+        <button class="h_menu"></button>
+    </header>
+   <div class="contents">
+        <section>
+            <div class="cna-tab-wrap">
+                <div thumbsSlider="" class="swiper-container mySwiper tab">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">입출금/예금</div>
+                        <div class="swiper-slide">전자금융</div>
+                    </div>
+                </div>
+                <!-- 목록 -->
+                <div class="swiper-container mySwiper2 tab-cont">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="prod-info">
+                                <img src="../images/img_prd_01.png" alt="영업점 방문없이! 쉽고 빠르게 모바일로 계좌개설" />
+                            </div>
+                            <div class="prod-group">
+                                <h3>입출금이 자유로운 예금</h3> <!-- 2021.06.04 Update -->
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <dl>
+                                                <dt>기업자유예금</dt>
+                                                <dd>가입대상, 예치한도에 제한이 없는 입출금이 자유로운 통장</dd>
+                                            </dl>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="prod-group">
+                                <h3>외화예금</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <dl>
+                                                <dt>외화다통화예금</dt>
+                                                <dd>하나의 계좌로 여러 통화를 동시에 거래할 수 있는 외화 입출금 통장</dd>
+                                            </dl>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="prod-info">
+                                <img src="../images/img_prd_02.png" alt="영업점 방문없이! 기업뱅킹 가입 모바일 OTP 발급 가능" />
+                            </div>
+                            <div class="prod-group">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <dl>
+                                                <dt>기업뱅킹 가입(법인)</dt>
+                                                <dd>인터넷/스마트폰 뱅킹 서비스를 이용하려면 전자금융 가입은 필수</dd>
+                                            </dl>
+                                        </a>
+                                    </li>
+                                    <!-- 2021.05.24 Update -->
+                                    <!-- <li>
+                                        <a href="#">
+                                            <dl>
+                                                <dt>모바일OTP(개인사업자/법인)</dt>
+                                                <dd>앱을 기반으로 한 일회용 비밀번호를 생성기로, 실물이 없는 무료 보안매체</dd>
+                                            </dl>
+                                        </a>
+                                    </li> -->
+                                    <!-- //2021.05.24 Update -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //목록 -->
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+    $(function(){
+
+        var swiper = new Swiper('.mySwiper', {
+            cssMode: true,
+            slidesPreview:2,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            speed: 100,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            thumbs: {
+                swiper:swiper,
+                speed: 100,
+            },
+            loop : true,
+        });
+    });
+    
+</script>
+</body>
+</html>

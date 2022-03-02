@@ -1,0 +1,429 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header>
+                <button class="back_btn"></button>
+                <p class="h_tit">본인인증</p>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot"> 
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_mi">가입 상품</span>을<br />선택해 주세요.</p> <!-- 2021.04.28 Update -->
+
+                    <div id="upScroll">
+                        <div class="cna_product_list">
+                            <!-- <div class="input_form">
+                                <div class="input_check">
+                                    <input type="checkbox" id="inputCheck09" class="j_input_check" input-target="" />
+                                    <label for="inputCheck09">모두 선택</label>
+                                </div> 
+                            </div> -->
+                            <ul class="check_list">
+                                <!-- 2021.06.15 Update -->
+                                <li class="all_check on">
+                                    <a href="#none">
+                                        <strong>모두 선택</strong>
+                                    </a>
+                                </li>
+                                <!-- //2021.06.15 Update -->
+                                <li class="">
+                                    <a href="#none">
+                                        <strong>기업자유예금</strong>가입대상, 예치한도에 제한이 없는<br />입출금이 자유로운 통장 <!-- 2021.04.28 Update -->
+                                    </a>
+                                    <button class="popup_open" layer-target="#examLayer">팝업오픈</button>
+                                </li>
+                                <li class="">
+                                    <a href="#none">
+                                        <strong>외화다통화계좌</strong>
+                                        하나의 계좌로 여러 통화를 동시에<br />거래할 수 있는 외화 입출금 통장 <!-- 2021.04.28 Update -->
+                                    </a>
+                                    <button class="popup_open">팝업오픈</button>
+                                </li>
+                                <li class="">
+                                    <a href="#none">
+                                        <!-- 2021.04.28 Update -->
+                                        <strong>기업전자금융</strong>
+                                        스마트폰/인터넷뱅킹 서비스를<br />이용하려면 전자금융 가입은 필수
+                                    </a>
+                                    <!-- 2021.05.14 Update 
+                                        <button class="popup_open">팝업오픈</button> -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btn_wrap btn_fix j_btn_fix" style="display: none;">
+                        <a href="#none" class="btn_type01">2건 가입</a> <!-- 2021.06.01 Update -->
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- 가입 checked -->
+        <div class="layerpopup">
+            <div class="layer_center">
+                <div class="layer_contents">
+                    <div class="pop_content">
+                        <p class="m-txt color01">아래 상품을 가입하시겠습니까?</p>
+                        <ul class="list_num">
+                            <li>기업자유예금</li>
+                            <li>기업전자금융</li> <!-- 2021.05.07 Update -->
+                        </ul>
+                    </div>
+                    <div class="btn_area btn_02 last_ck">
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                        <button type="button" class="confirm j_layer_close">가입</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //가입 checked -->
+
+        <!-- 상품 선택 -->
+        <div class="layerpopup">
+            <div class="layer_center">
+                <div class="layer_contents">
+                    <div class="pop_content">
+                        <p>상품을 선택하셨습니다.<br />아래 가입 버튼을 탭 하시면 선택한 상품을 함께 신청할 수 있습니다.</p>
+                    </div>
+                    <div class="btn_area btn_02">
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                        <button type="button" class="confirm j_layer_close">가입</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //상품 선택 -->
+
+        <!-- 선택 해지 -->
+        <div class="layerpopup">
+            <div class="layer_center">
+                <div class="layer_contents">
+                    <div class="pop_content">
+                        <p>상품의 선택을 해제하시겠습니까?</p>
+                    </div>
+                    <div class="btn_area btn_02">
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                        <button type="button" class="confirm j_layer_close">해제</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //선택 해지 -->
+
+        <!-- 기업자유예금 : 상품상세 -->
+        <div class="layerpopup" id="examLayer">
+            <div class="layer_90 tab_layer">
+                <div class="layer_contents">
+                    <div class="pop_tit ">
+                        <h5>기업자유예금</h5>
+                    </div>
+                    <div class="pop_content j_scroll">
+                        <div class="swiper-wrapper">
+                            <div class="pop_inner swiper-slide">
+                                <p class="content_info">가입대상, 예치한도에 제한이 없는<br /> 입출금이 자유로운 통장</p>
+                                <div class="tab_area">
+                                    <ul class="tabs">
+                                        <li class="on">상품개요</li>
+                                        <li>상품정보</li>
+                                        <li>금리안내</li>
+                                    </ul>
+                                </div>
+                                <div class="tab_cont_area">
+                                    <!-- 상품개요 -->
+                                    <div class="tabcont">
+                                        <div class="cont_part">
+                                            <h4>상품특징</h4>
+                                            <p>기업의 일시 여유자금 운용에 적합한 수시 입출금 예금</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>가입대상</h4>
+                                            <p>법인 및 개인사업자</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>가입금액</h4>
+                                            <p class="color03">제한 없음</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>기본금리</h4>
+                                            <p>0.1% (신규일 당시 영업점 및 인터넷 홈페이지에 고시한 기본금리 적용)</p>
+                                        </div>
+                                    </div>
+                                    <!-- 상품개요 -->
+
+                                    <!-- 상품정보 -->
+                                    <div class="tabcont">
+                                        <div class="cont_part">
+                                            <h4>이자지급방법</h4>
+                                            <p>이자계산기간동안 매일의 최종잔액에 기본금리를 적용한 일별이자를 합산하여 지급</p>
+                                            <table class="mt10 type_row">
+                                                <colgroup>
+                                                    <col style="width:30%;">
+                                                    <col style="width:auto;">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>이자계산기간</th>
+                                                        <td class="left">예금일(또는 원가일)부터 지급일(또는 원가일) 전날까지의 기간</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>이자결산일</th>
+                                                        <td class="left">3월, 6월, 9월, 12월의 제3금요일</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>이자지급일<br />(원가일)</th>
+                                                        <td class="left">결산일 익일</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>휴면예금 및 출연</h4>
+                                            <p>이자지급을 포함한 최종거래일 이후 5년 이내에 계좌를 해지하지 않을 경우, 예금거래기본약관 제9조의 2 휴면예금 및 출연에 따라 ‘서민금융진흥원’으로 출연될 수 있으며, 휴면예금은 휴면예금 통합조회서비스를 통해 조회 가능합니다.</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>원금 및 이자지급제한</h4>
+                                            <p>계좌에 압류, 가압류 등이 등록될 경우 원금 및 이자지급이 제한될 수 있습니다.<br />예금잔액증명서 발급 당일 잔액 변동이 불가합니다.<br /> 통장이 ‘전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법’ 에서 정의한 피해의심 거래계좌 및 사기 이용계좌로 이용될 경우 이체, 송금지연, 지급정지 등의 금융거래 제한조치를 할 수 있습니다.</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>위법계약해지권</h4>
+                                            <p>설명의무 위반 등 금융소비자 보호에 관한 법률 제47조에 따른 위법계약해지 사유가 발생한 경우, 계약체결일로부터 5년이내 범위에서 위반사실을 안 날로부터 1년이내에 서면 등으로 해당 계약의 해지를 요구할 수 있습니다. 만약 금융소비자의 요구가 정당한 것으로 판단될 경우 수수료 등 계약해지와 관련한 추가 비용 부담없이 계약해지가 가능합니다.</p>
+                                        </div>
+                                        <div class="client_safely">
+                                            <p class="tit">예금자보호여부</p> <!-- 2021.05.26 -->
+                                            <p class="kdic_mark">이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호한도는 본 은행에 있는 귀하의 모든 예금보험대상 금융상품의 원금과 소정의 이자를 합하여 1인당 “최고 5천만원”이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>
+                                            <!-- <p class="kdic">준법감시인 심사필 2019-상품-1051호(2019.03.15) <br />
+                                                본 공시내용의 유효기간 : 2019.03.15 ~ 2022.03.14 <br />
+                                                기준일 : 2019년 03월 16일</p> -->
+                                        </div>
+                                        <button type="button" class="btn_type07 t_de">기업자유예금 상품설명서 보기</button>
+                                    </div>
+                                    <!-- //상품정보 -->
+
+                                    <!-- 금리안내 -->
+                                    <div class="tabcont">
+                                        <div class="cont_part">
+                                            <h4>기본금리 <span>(2021-05-11 기준)</span></h4>
+                                            <table class="mt10 type_col">
+                                                <colgroup>
+                                                    <col style="width: 50%;">
+                                                    <col style="width: 50%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>금액</th>
+                                                        <th>금리안내(연율,세전)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>0.1%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- //금리안내 -->
+                                </div>
+                                <!-- <div class="client_safely">
+                                    <p class="tit">예금자 보호</p>
+                                    <p class="kdic_mark">이 예금은 예금자 보호법에 따라, 예금보험공사가 보호한도는 본 은행에 있는 귀하의 모든 예금대상 금융상품의 원금과 소정의 이자를 합하여 1인당 “최고 5천만원”이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>
+                                    <p class="kdic">준법감시인 심사필 2019-상품-1051호(2019.03.15) <br />
+                                        본 공시내용의 유효기간 : 2019.03.15 ~ 2022.03.14 <br />
+                                        기준일 : 2019년 03월 16일</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_fix_area last_ck">
+                        <button type="button" class="pop_btn01 j_layer_close word_space15 confirm">가 <span>입</span></button>
+                    </div>
+                    <button type="button" class="cancel j_layer_close">취소</button>
+                </div>
+            </div>
+        </div>
+       <!-- 기업자유예금 : 상품상세 -->
+
+       <!-- 외화다통화예금 : 상품상세 -->
+        <div class="layerpopup" id="examLayer02">
+            <div class="layer_90 tab_layer">
+                <div class="layer_contents">
+                    <div class="pop_tit ">
+                        <h5>외화다통화예금</h5>
+                    </div>
+                    <div class="pop_content j_scroll">
+                        <div class="swiper-wrapper">
+                            <div class="pop_inner swiper-slide">
+                                <p class="content_info">하나의 계좌로 여러 통화를 동시에<br />거래할 수 있는 외화 입출금 통장</p>
+                                <div class="tab_area">
+                                    <ul class="tabs">
+                                        <li class="on">상품개요</li>
+                                        <li>상품정보</li>
+                                        <li>금리안내</li>
+                                    </ul>
+                                </div>
+                                <div class="tab_cont_area">
+                                    <!-- 상품개요 -->
+                                    <div class="tabcont">
+                                        <div class="cont_part">
+                                            <h4>상품특징</h4>
+                                            <p>하나의 대표계좌번호로만 거래 가능<br />통장 이월 시 잔액이 있는 통화만 통장에 인자</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>가입대상</h4>
+                                            <p>실명의 개인 또는 법인</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>최저가입금액</h4>
+                                            <p class="color03">제한 없음</p>
+                                        </div>
+                                    </div>
+                                    <!-- 상품개요 -->
+
+                                    <!-- 상품정보 -->
+                                    <div class="tabcont">
+                                        <div class="cont_part">
+                                            <h4>예치통화</h4>
+                                            <p>아래의 예치 가능한 통화 중 최대 10개까지 대표계좌번호로 거래 가능합니다.<br />예치가능 통화 종류 : USD, EUR, JPY, GBP, CHF, CAD, AUD, NZD, HKD, SGD, DKK, NOK, SEK, THB, IDR, SAR, AED, KWD, BHD, RUB, ZAR, HUF, PLN, MXN, CNY, TRY, CZK(27개국 통화)</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>이자지급방법</h4>
+                                            <p>이 예금의 이자지급은 외화보통예금의 이자지급 방법을 따르며 이자율은 해당 통화별 외화보통예금 고시금리를 따릅니다.<br />이 예금의 이자계산은 최초 예금일 또는 지난 원가일부터 원가일 또는 지급일 전날까지의 기간으로 매일 최종잔액을 평균하여 영업점 및 인터넷 홈페이지에 고시된 통화별 이율을 적용합니다.</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>유의사항</h4>
+                                            <p>이 예금은 원화로 인출하는 경우 환율변동으로 인하여 이익 또는 손실이 발생할 수 있으며, 외화현찰로 입출금하는 경우와 여행자수표로 인출하는 경우에는 현찰수수료 또는 여행자수표 수수료가 발생할 수 있습니다.</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>원금 및 이자지급제한</h4>
+                                            <p>계좌에 압류, 가압류 등이 등록될 경우 원금 및 이자지급이 제한될 수 있습니다.<br />예금잔액증명서 발급 당일 잔액 변동이 불가합니다.<br /> 통장이 ‘전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법’ 에서 정의한 피해의심 거래계좌 및 사기 이용계좌로 이용될 경우 이체, 송금지연, 지급정지 등의 금융거래 제한조치를 할 수 있습니다.</p>
+                                        </div>
+                                        <div class="cont_part">
+                                            <h4>위법계약해지권</h4>
+                                            <p>설명의무 위반 등 금융소비자 보호에 관한 법률 제47조에 따른 위법계약해지 사유가 발생한 경우, 계약체결일로부터 5년이내 범위에서 위반사실을 안 날로부터 1년이내에 서면 등으로 해당 계약의 해지를 요구할 수 있습니다. 만약 금융소비자의 요구가 정당한 것으로 판단될 경우 수수료 등 계약해지와 관련한 추가 비용 부담없이 계약해지가 가능합니다.</p>
+                                        </div>
+                                        <div class="client_safely">
+                                            <p class="tit">예금자보호여부</p> <!-- 2021.05.26 -->
+                                            <p class="kdic_mark">이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호한도는 본 은행에 있는 귀하의 모든 예금보험대상 금융상품의 원금과 소정의 이자를 합하여 1인당 “최고 5천만원”이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>
+                                            <!-- <p class="kdic">준법감시인 심사필 2019-상품-1051호(2019.03.15) <br />
+                                                본 공시내용의 유효기간 : 2019.03.15 ~ 2022.03.14 <br />
+                                                기준일 : 2019년 03월 16일</p> -->
+                                        </div>
+                                        <button type="button" class="btn_type07 t_de">외화다통화예금 상품설명서 보기</button>
+                                    </div>
+                                    <!-- //상품정보 -->
+
+                                    <!-- 금리안내 -->
+                                    <div class="tabcont">
+                                        <div class="cont_part">
+                                            <h4>기본금리 <span>(2021-02-03 기준)</span></h4>
+                                            <p>가입일 당시 영업점 또는 당행 홈페이지에 고시된 외화정기예금 이율(통화코드,%)</p> <!-- 2021.05.26 -->
+                                            <!-- 기본 통화 -->
+                                            <div class="input_form input_form_sel on">
+                                                <div class="input_wrap on">
+                                                    <div class="input_title j_focus_open j_layer_open" layer-target ="#layerpopup00">기본 통화</div>
+                                                    <div class="input_select">
+                                                        <div id="idInput-G0-01" class="input_data j_layer_open" layer-target="#layerpopup00">USD</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //기본 통화 -->
+                                            <table class="mt40 type_col">
+                                                <colgroup>
+                                                    <col style="width: 25%;">
+                                                    <col style="width: 25%;">
+                                                    <col style="width: 25%;">
+                                                    <col style="width: 25%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>거주자<br />구분</th>
+                                                        <th>금리기간<br />시작범위</th>
+                                                        <th>금리기간<br />종료범위</th>
+                                                        <th>금리</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>거주자</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>0.0100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>비거주자</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>0.0100</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="norm">(2021.05.07 기준, 연이율 세전)</p>
+                                        </div>
+                                    </div>
+                                    <!-- //금리안내 -->
+                                </div>
+                                <!-- <div class="client_safely">
+                                    <p class="tit">예금자 보호</p>
+                                    <p class="kdic_mark">이 예금은 예금자 보호법에 따라, 예금보험공사가 보호한도는 본 은행에 있는 귀하의 모든 예금대상 금융상품의 원금과 소정의 이자를 합하여 1인당 “최고 5천만원”이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>
+                                    <p class="kdic">준법감시인 심사필 2019-상품-1051호(2019.03.15) <br />
+                                        본 공시내용의 유효기간 : 2019.03.15 ~ 2022.03.14 <br />
+                                        기준일 : 2019년 03월 16일</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_fix_area last_ck">
+                        <button type="button" class="pop_btn01 j_layer_close word_space15 confirm">가 <span>입</span></button>
+                    </div>
+                    <button type="button" class="cancel j_layer_close">취소</button>
+                </div>
+            </div>
+        </div>
+        <!-- 외화다통화예금 : 상품상세 -->
+
+        <!-- 기본 통화 선택 -->
+        <div id="layerpopup00" class="layerpopup">
+            <div class="layer_select">
+                <div class="layer_contents">
+                    <div class="pop_tit">
+                        <h5>기본 통화 선택</h5>
+                    </div>
+                    <div class="pop_content j_scroll">
+                        <div class="swiper-wrapper">
+                            <div class="pop_inner swiper-slide">
+                                <ul class="select_list j_select">
+                                    <li><a href="#idInput-G0-01">USD</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="cancel j_layer_close">취소</button>
+                </div>
+            </div>
+        </div>
+        <!-- //기본 통화 선택 -->
+    </body>
+</html>

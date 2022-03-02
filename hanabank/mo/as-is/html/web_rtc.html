@@ -1,0 +1,96 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+        <style type="text/css">
+            .test_rtc {padding:4.5rem 2rem 20rem !important;}
+            .picture_guide + .picture_guide {margin-top:6rem;}
+            .picture_guide .btn_wrap {margin-top:2rem;}
+            .picture_area {overflow:hidden;width:100%;height:22rem;padding-top:0;background:#000}
+            .btn_wrap {display:flex;justify-content:center;}
+            .btn_wrap .btn_type01 + .btn_type01 {margin-left:1rem;}
+        </style>
+    </head>
+    <body>
+        <div class="wrapper full_pop">
+            <header>
+                <p class="h_tit">하나은행 WEB RTC</p>
+                <button class="h_close"></button>
+            </header>
+            <div class="contents guide_section test_rtc">
+                <section class="picture_guide">
+                    <div class="picture_area type01">
+                        <!-- video -->
+                    </div>
+                    <div class="btn_wrap">
+                        <a href="#none" class="btn_type01">촬영</a>
+                    </div>
+                </section>
+                <section class="picture_guide">
+                    <div class="picture_area type01">
+                        <!-- 캡처 이미지 -->
+                        <img src="../images/sample-id@2x.png" alt="사진">
+                    </div>
+                    <div class="btn_wrap">
+                        <a href="#none" class="btn_type01">다시 시도</a>
+                        <a href="#none" class="btn_type01">확인</a>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- Layer Popup  -->
+        <div class="layerpopup" id="layerpopup01">
+            <div class="layer_center">
+                <div class="layer_contents">
+                    <div class="pop_content">
+                        <p>신분증 인식이 실패하였습니다.<br />아래내용 확인 후 다시 촬영해주세요.</p> <!-- 2021.06.16 Update -->
+                        <ul class="list_num small">
+                            <li>신분증 원본 촬영</li>
+                            <li>신분증을 어두운 바탕에 놓고 촬영</li>
+                            <li>빛 번짐과 흔들림이 없는지 확인</li>
+                            <li>촬영 장소가 너무 어둡거나 밝다면 장소를 이동</li>
+                        </ul>
+                    </div>
+                    <div class="btn_area">
+                        <button type="button" class="confirm j_layer_close">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Layer Popup  -->
+
+        <!-- Layer Popup  -->
+        <div class="layerpopup" id="layerpopup02">
+            <div class="layer_center">
+                <div class="layer_contents">
+                    <div class="pop_content">
+                        <p>재외국민은 비대면실명확인 서비스를 이용하실 수 없습니다. <br />
+                            영업점을 방문하여 거래해 주세요.</p>
+                    </div>
+                    <div class="btn_area">
+                        <button type="button" class="confirm j_layer_close">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Layer Popup  -->
+
+    </body>
+
+</html>

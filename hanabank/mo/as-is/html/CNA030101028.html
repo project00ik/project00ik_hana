@@ -1,0 +1,516 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header class="steps_area">
+                <button class="back_btn"></button>
+                <h2 class="h_tit">
+                    <ul>
+                        <li class="end"><span></span></li>
+                        <li class="end"><span>2</span></li>
+                        <li class="ing"><span>3 상품신청</span></li>
+                        <li><span>4</span></li>
+                    </ul>
+                </h2>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_mi">기업전자금융</span></p>
+
+                    <div id="upScroll" class="input_form_group on j_focus_group on">
+                        <!-- 이용자 아이디 -->
+                        <div class="input_form"><!-- class error_on 추가시 에러 메시지 노출, class non_error_on 추가시 컨펌 메시지 노출 -->
+                            <div class="input_wrap">
+                                <label for="idInput-G1-01" class="input_title j_focus_open">이용자 아이디</label>
+                                <div class="input_txt">
+                                    <input type="password" id="idInput-G1-01" class="input_data j_input_value" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                    <button type="button" class="btn_type02 j_btn_toggle">중복체크</button>
+                                </div>
+                            </div>
+                            <div class="input_non_error">
+                                <p>사용 가능한 아이디입니다.</p>
+                            </div>
+                            <div class="input_error">
+                                <p>이미 사용중인 아이디입니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="txt_notice j_toggle">
+                            <button type="button" class="txt_notice_open j_toggle_open">알아두세요</button>
+                            <div class="txt_notice_cont j_toggle_cont">
+                                <ul class="list_type01">
+                                    <li>전자금융 이용 시 로그인을 위한 설정입니다.</li>
+                                    <li>아이디는 영문, 영문+숫자로 6~15자리 까지 등록 가능합니다.</li>
+                                    <li>이미 사용중인 아이디는 사용이 불가능합니다.</li>
+                                    <li>이용자 아이디는 다단계 결재가 가능한 ‘단독 사용자’로 신규됩니다.<br />
+                                        (단독 사용자란? 다른 사용자들에게 업무권한/계좌권한/이체한도 등을 부여하고 다단계결재를 관리하면서 결재등록/승인 등의 금융업무도 함께할 수 있는 사용자입니다.)
+                                    </li> <!-- 2021.07.01 Update -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //이용자 아이디 -->
+                    </div>
+
+                    <div class="input_form_group j_focus_group on">
+                        <!-- 보안매체 선택 -->
+                        <div class="input_form input_form_sel j_focus">
+                            <div class="input_wrap">
+                                <div class="input_title j_focus_open j_layer_open" layer-target="#layerpopup01">보안매체 선택</div>
+                                <div class="input_select">
+                                    <div id="idInput-G2-01" class="input_data j_layer_open" layer-target="#layerpopup01"></div>
+                                </div>
+                            </div>
+                            <ul id="selectedOtp" class="opt_lists" style="display:none">
+                                <li>
+                                    <p class="tit">OTP</p>
+                                    <p class="num">Number</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="btn_wrap">
+                            <button type="button" class="btn_type04 j_layer_open" layer-target="#layerpopup04">모바일 OTP 안내</button>
+                        </div>
+
+                        <div class="txt_notice j_toggle">
+                            <button type="button" class="txt_notice_open j_toggle_open">알아두세요</button>
+                            <div class="txt_notice_cont j_toggle_cont">
+                                <ul class="list_type01">
+                                    <li><strong>사용중인 OTP 선택</strong><br />하나은행 또는 타 은행에서 발급받아 사용하고 있는 OTP 중 하나를 사용합니다.</li>
+                                    <li><strong>모바일OTP 신규발급</strong><br />앱 기반의 하나은행 전용 OTP로 실물이 없는 스마트폰 전용 무료 보안매체입니다. OTP 안심번호(숫자6자리) 입력 없이 자동 인증합니다.</li> <!-- 2021.06.25, 2021.06.23 Update -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //보안매체 선택 -->
+                    </div>
+
+                    <div class="input_form_group j_subCont_layerpopup01" data-when-from="mobile_otp">
+                        <!-- 모바일OTP 활성화코드 -->
+                        <div class="input_form j_focus"><!-- class error_on 추가시 에러 메시지 노출 -->
+                            <div class="input_wrap">
+                                <label for="idInput-G2-02" class="input_title j_focus_open">모바일OTP 활성화번호</label> <!-- 2021.06.23 Update -->
+                                <div class="input_txt">
+                                    <input type="password" id="idInput-G2-02" class="input_data j_input_value" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                            <div class="input_error">
+                                <p>OTP 비밀번호 6자리를 입력해 주세요.</p>
+                            </div>
+                        </div>
+                        <!-- //모바일OTP 활성화코드 -->
+
+                        <!-- 모바일OTP 활성화코드 확인 -->
+                        <div class="input_form"><!-- class error_on 추가시 에러 메시지 노출 -->
+                            <div class="input_wrap">
+                                <label for="idInput-G2-03" class="input_title j_focus_open">모바일OTP 활성화번호 확인</label> <!-- 2021.06.23 Update -->
+                                <div class="input_txt">
+                                    <input type="password" id="idInput-G2-03" class="input_data j_input_value" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                            <div class="input_error">
+                                <p>동일한 번호를 입력해 주세요.</p>
+                            </div>
+                        </div>
+                        <!-- //모바일OTP 활성화코드 확인 -->
+                    </div>
+
+                    <div class="input_form_group j_focus_group on"> <!-- 2021.05.07 Update -->
+                        <!-- 1일(업체) 이체한도 -->
+                        <div class="btn_wrap_right">
+                            <button type="button" class="btn_type06 custom j_target_on">최대한도</button> <!-- 2021.06.17 Update -->
+                        </div>
+
+                        <div class="input_form j_focus">
+                            <div class="input_wrap">
+                                <label for="idInput-G3-01" class="input_title j_focus_open">1일(업체) 이체한도</label>
+                                <div class="input_txt input_money">
+                                    <input id="idInput-G3-01" class="input_data j_input_value" type="number" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                    <span class="txt_won">원</span>
+                                </div>
+                            </div>
+                            <div class="input_error">
+                                <p>1일 이체한도는 1천만원을 넘을 수 없습니다.</p>
+                            </div>
+                        </div>
+                        <!-- //1일(업체) 이체한도 -->
+                        
+                        <!-- 1회 이체한도 -->
+                        <div class="input_form">
+                            <div class="input_wrap">
+                                <label for="idInput-G3-02" class="input_title j_focus_open">1회 이체한도</label>
+                                <div class="input_txt input_money">
+                                    <input id="idInput-G3-02" class="input_data j_input_value" type="number" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                    <span class="txt_won">원</span>
+                                </div>
+                            </div>
+                            <div class="input_error">
+                                <p>1회 이체한도는 1천만원을 넘을 수 없습니다.</p>
+                            </div>
+                        </div>
+                        <!-- //1회 이체한도 -->
+                        
+                        <div class="txt_notice j_toggle">
+                            <button type="button" class="txt_notice_open j_toggle_open">알아두세요</button>
+                            <div class="txt_notice_cont j_toggle_cont">
+                                <ul class="list_type01">
+                                    <li>최대 이체한도인 1일 50억원, 1회 10억원으로 증액을 원하시면 영업점에 방문하여 처리하시기 바랍니다.</li> <!-- 2021.05.26 -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input_form_group on">
+                        <!-- 출금계좌 추가 -->
+                        <div class="input_form input_form_sel">
+                            <div class="input_wrap">
+                                <div class="input_title j_focus_open j_layer_open" layer-target="#layerpopup06">출금계좌 추가</div>
+                                <div class="input_select">
+                                    <div id="idInput11" class="input_data j_layer_open" layer-target="#layerpopup06"></div>
+                                </div>
+                            </div>
+                            <ul id="selectedAccount" class="opt_lists" style="display: none;">
+                                <!-- <li>
+                                    <p class="tit">저축예금</p>
+                                    <p class="num">209 -123456 - 51107</p>
+                                </li>
+                                <li>
+                                    <p class="tit">저축예금</p>
+                                    <p class="num">209 -123456 - 51107</p>
+                                </li>
+                                <li>
+                                    <p class="tit">저축예금</p>
+                                    <p class="num">209 -123456 - 51107</p>
+                                </li>
+                                <li>
+                                    <p class="tit">저축예금</p>
+                                    <p class="num">209 -123456 - 51107</p>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <!-- //출금계좌 추가 -->
+                    </div>
+                    <div class="btn_wrap btn_fix">
+                        <a href="#none" class="btn_type01">다음</a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 보안매체 선택 -->
+            <div id="layerpopup01" class="layerpopup">
+                <div class="layer_select">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <h5>보안매체</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide">
+                                    <ul class="select_list j_select j_typeOfOtp" element-target='#selectedOtp'>
+                                        <li><a href="#idInput-G2-01" class="j_layer_open" layer-target="#layerpopup02" data-when-to="mobile_otp">모바일OTP 신규발급</a></li>
+                                        <li><a href="#idInput-G2-01" layer-target="#layerpopup03" data-when-to="">사용중인 OTP 등록</a></li><!-- 2021.06.04, 2021.05.11 Update -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //보안매체 선택 -->
+
+            <!-- 모바일OTP 신규 -->
+            <div id="layerpopup02" class="layerpopup">
+                <div class="layer_center">
+                    <div class="layer_contents">
+                        <!-- 2021.06.14 Update 스크롤 수정 -->
+                        <div class="pop_tit type02">
+                            <h5>꼭 확인해 주세요</h5>
+                        </div>
+                        <div class="pop_content j_scroll custom"> <!-- 2021.06.17 Update -->
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="txt_cont">
+                                        <p class="list_txt">모바일OTP를 신규 발급 후 사용할 경우, 앱을 삭제하거나 휴대폰 변경 시 영업점 방문하여 재발급해야 합니다. <br />타 금융기관 발급 OTP가 있을경우<br />'사용중인 OTP'를 선택해 주세요.</p> <!-- 2021.07.26 Update, 2021.06.04 Update -->
+                                        <p class="list_txt mt10">아래 운영체제에서는<br>모바일OTP를 이용하실 수 없습니다.</p> <!-- 2021.06.04 Update -->
+                                        <div class="limit_table limit_table_type02">
+                                            <ul>
+                                                <li><span>안드로이드</span><span>버전 4.3 미만 이용불가</span></li>
+                                                <li><span>아이폰</span><span>버전 8.0 미만 이용불가</span></li>
+                                            </ul>
+                                        </div>
+                                        <p class="list_tit">운영체제 확인방법</p>
+                                        <ul class="list_dot">
+                                            <li>안드로이드 : 설정>디바이스 정보>소프트웨어 정보</li>
+                                            <li>아이폰 : 설정>일반>정보</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //2021.06.14 Update -->
+                        <div class="btn_area">
+                            <button type="button" class="confirm j_layer_close j_focus_move" move-target="#idInput-G2-01">확인</button>
+                        </div>
+                        <button type="button" class="layer_close j_layer_close">닫기</button> <!-- 2021.06.04 D:팝업닫기 버튼 추가 -->
+                    </div>
+                </div>
+            </div>
+            <!-- //모바일OTP 신규 -->
+            
+            <!-- 보유OTP -->
+            <div id="layerpopup03" class="layerpopup">
+                <div class="layer_90">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <h5>보유OTP</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide">
+                                    <ul class="opt_lists j_selectOfOtp">
+                                        <li>
+                                            <a href="#selectedOtp" class="j_layer_close j_focus_move" move-target="#idInput-G2-01">
+                                                <p class="tit">미래테크놀로지미래테크놀01</p>
+                                                <p class="num">01008032104321</p>
+                                                <p class="period">국민은행 - 2016.10.01</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#selectedOtp" class="j_layer_close j_focus_move" move-target="#idInput-G2-01">
+                                                <p class="tit">미래테크놀로지미래테크놀02</p>
+                                                <p class="num">01008032104321</p>
+                                                <p class="period">국민은행 - 2016.10.01</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#selectedOtp" class="j_layer_close j_focus_move" move-target="#idInput-G2-01">
+                                                <p class="tit">미래테크놀로지미래테크놀03</p>
+                                                <p class="num">01008032104321</p>
+                                                <p class="period">국민은행 - 2016.10.01</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#selectedOtp" class="j_layer_close j_focus_move" move-target="#idInput-G2-01">
+                                                <p class="tit">미래테크놀로지미래테크놀04</p>
+                                                <p class="num">01008032104321</p>
+                                                <p class="period">국민은행 - 2016.10.01</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#selectedOtp" class="j_layer_close j_focus_move" move-target="#idInput-G2-01">
+                                                <p class="tit">미래테크놀로지미래테크놀05</p>
+                                                <p class="num">01008032104321</p>
+                                                <p class="period">국민은행 - 2016.10.01</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#selectedOtp" class="j_layer_close j_focus_move" move-target="#idInput-G2-01">
+                                                <p class="tit">미래테크놀로지미래테크놀06</p>
+                                                <p class="num">01008032104321</p>
+                                                <p class="period">국민은행 - 2016.10.01</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //보유OTP -->
+            <!-- 모바일 OTP 안내 -->
+            <div  id="layerpopup04" class="layerpopup">
+                <div class="layer_90">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <h5>모바일 OTP 안내</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide cma_opt">
+                                    <h5 class="txt_tit">모바일 OTP란?</h5> <!-- 2021.06.28 Update -->
+                                    <div class="txt_cont">
+                                        <ul class="list_dot">
+                                            <li>모바일OTP는 앱 기반의 하나은행 전용 일회용 비밀번호 생성기(OTP)로 실물이 없는 무료 보안매체 입니다.</li>
+                                            <li>모바일OTP 발급 시 일회용 비밀번호(숫자6자리) 입력 없이 사용 가능한 자동인증 방식을 지원합니다.</li>
+                                        </ul>
+                                    </div>
+                                    <h5 class="txt_tit">이용대상 고객</h5>
+                                    <div class="txt_cont">
+                                        <ul class="list_dot">
+                                            <li>비대면 계좌개설을 통해 처음 하나은행 기업뱅킹을 가입하는 사용자</li>
+                                            <!-- 2021.07.13 삭제
+                                            <li>기존 하나은행 기업뱅킹을 가입한 사용자 중 이미 실물OTP를 사용 중인 사용자</li> -->
+                                        </ul>
+                                    </div>
+                                    <h5 class="txt_tit">발급 전 확인사항</h5>
+                                    <div class="txt_cont">
+                                        <ul class="list_dot">
+                                            <li>모바일OTP는 ‘하나원큐기업’에서 <span class="color03">신규 시에만</span> 발급하여 사용하실 수 있습니다.</li> <!-- 2021.06.28 Update -->
+                                            <li>모바일OTP는 하나은행에서만 이용 가능합니다. <br />(타행에서 이용하실 수 없습니다.)</li>
+                                            <!-- 2021.07.13 삭제 
+                                            <li>모바일OTP발급 시 이전에 발급된 기존 OTP는 사용하실 수 없습니다.</li> -->
+                                            <li>이체한도는 1일 최대 50억원, 1회 최대 10억원 입니다.</li>
+                                        </ul>
+                                    </div>
+                                    <h5 class="txt_tit">이용가능 단말기</h5>
+                                    <div class="txt_cont">
+                                        <ul class="list_dot">
+                                            <li>‘하나원큐기업’ 설치가 가능한 스마트폰</li>
+                                            <li>OS :Android 4.3이상 / iOS 8.0 이상</li>
+                                        </ul>
+                                    </div>
+                                    <h5 class="txt_tit">이용 시 유의사항</h5>
+                                    <div class="txt_cont">
+                                        <ul class="list_dot">
+                                            <li>기존 모바일OTP를 이용하던 휴대폰을 변경하시거나 하나원큐기업 앱을 재설치 하신 경우 지점에서 실물 OTP를 발급받으셔야 합니다.</li> <!-- 2021.06.28 Update -->
+                                            <li>발급과정에서 본인인증 가능한 휴대전화, 신분증, 하나은행 계좌정보 등이 필요할 수 있습니다.</li>
+                                            <li>모바일OTP발급 시 바로 이용이 가능합니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //모바일 OTP 안내 -->
+
+            <!-- 출금계좌 추가 -->
+            <div id="layerpopup06" class="layerpopup">
+                <div class="layer_select">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <h5>출금 계좌 추가</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide">
+                                    <ul class="select_list j_select j_typeOfAccount" element-target='#selectedAccount'>
+                                        <li><a href="#idInput11" class="j_layer_open j_get_data" layer-target="#layerpopup07">추가함</a></li>
+                                        <li><a href="#idInput11">추가 안함</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+
+            <div  id="layerpopup07" class="layerpopup">
+                <div class="layer_90">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <h5>출금계좌 추가</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="pop_inner">
+                                        <div class="add_account" id="j_checkbox01">
+                                            <input type="checkbox" class="allcheck" id="accountAllcheck">
+                                            <label for="accountAllcheck">전체선택</label>
+                                            <ul class="account_list j_selectOfAccountList" element-target='#selectedAccount'>
+                                                <li>
+                                                    <input type="checkbox" id="check01" class="j_checkbox01" checked="checked">
+                                                    <label for="check01">
+                                                        <span class="account_name">1저축예금</span>
+                                                        <span class="account_num">209-123456-51107</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="check02" class="j_checkbox01" checked="checked">
+                                                    <label for="check02">
+                                                        <span class="account_name">2저축예금</span>
+                                                        <span class="account_num">209-123456-51107</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="check03" class="j_checkbox01">
+                                                    <label for="check03">
+                                                        <span class="account_name">3주거래하나통장</span>
+                                                        <span class="account_num">209-123456-51107</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="check04" class="j_checkbox01">
+                                                    <label for="check04">
+                                                        <span class="account_name">4저축예금</span>
+                                                        <span class="account_num">209-123456-51107</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="check05" class="j_checkbox01">
+                                                    <label for="check05">
+                                                        <span class="account_name">5저축예금</span>
+                                                        <span class="account_num">209-123456-51107</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="check06" class="j_checkbox01">
+                                                    <label for="check06">
+                                                        <span class="account_name">6저축예금</span>
+                                                        <span class="account_num">209-123456-51107</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="check07" class="j_checkbox01">
+                                                    <label for="check07">
+                                                        <span class="account_name">7주거래하나통장</span>
+                                                        <span class="account_num">209-123456-51107</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" id="check08" class="j_checkbox01">
+                                                    <label for="check08">
+                                                        <span class="account_name">8주거래하나통장</span>
+                                                        <span class="account_num">209-123456-51107</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pop_fix_area j_selectOfAccount">
+                            <!-- D : Defualt disabled, 계좌 선택 시에 해제 -->
+                            <!-- <button type="button" class="pop_btn01 j_layer_close j_focus_move" element-target='#selectedAccount' move-target="#idInput11" disabled="">확인</button> -->
+                            <button type="button" class="pop_btn01 j_layer_close j_focus_move" element-target='#selectedAccount' move-target="#idInput11">확인</button>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //출금계좌 추가 -->
+        </div>
+    </body>
+</html>

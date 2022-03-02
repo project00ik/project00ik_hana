@@ -1,0 +1,305 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header class="steps_area">
+                <button class="back_btn"></button>
+                <h2 class="h_tit">
+                    <ul>
+                        <li class="end"><span></span></li>
+                        <li class="end"><span></span></li>
+                        <li class="end"><span></span></li>
+                        <li class="ing"><span>4 인증</span></li>
+                    </ul>
+                </h2>
+                <button class="h_menu j_layer_open" layer-target="#menuNav"></button>0
+                .
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_mi">타행 본인 계좌</span>를 <br />입력해 주세요.</p>                    
+                </section>
+            </div>
+        </div>
+
+        <!-- 전체메뉴 -->
+        <div id="menuNav" class="layerpopup">
+            <div class="layer_select">
+                <div class="layer_contents">
+                    <div class="layer_nav">
+                        <h5>비대면 계좌개설</h5>
+                        <ul class="list_type04">
+                            <li><button type="button">신청결과 조회</button></li>
+                            <li><button type="button" class="j_layer_open" layer-target="#serviceGuide">서비스 가이드</button></li>
+                            <li class="bg_none"><button type="button" class="j_layer_open" layer-target="#end">신청 종료</button></li>
+                        </ul>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //전체메뉴 -->
+
+        <!-- 신청종료 -->
+        <div id="end" class="layerpopup">
+            <div class="layer_center">
+                <div class="layer_contents">
+                    <div class="pop_content">
+                        <p>서비스를 종료 하시겠습니까?<br />상품가입 신청중 이셨다면 서비스가 종료되어도 입력한 정보는 7일간 저장되며, 7일 이내에는 이어서 신청하실 수 있습니다. 7일 이후에는 신청정보가 모두 삭제됩니다.</p>
+                    </div>
+                    <div class="btn_area btn_02">
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                        <button type="button" class="confirm">종료</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 신청종료 -->
+
+        <!-- 서비스 가이드 -->
+        <div id="serviceGuide" class="layerpopup">
+            <div class="layer_90 tab_layer">
+                <div class="layer_contents">
+                    <div class="pop_tit tab_area">
+                        <h5>서비스 가이드</h5>
+                        <ul class="tabs">
+                            <li class="on">사전 확인 사항</li>
+                            <li>이용 안내</li>
+                            <li>상품 가입 안내</li>
+                        </ul>
+                    </div>
+                    <div class="pop_content tab_cont_area j_scroll">
+                        <div class="swiper-wrapper">
+                            <!-- 2021.05.21 Update -->
+                            <div class="swiper-slide">
+                                <div class="tabcont ">
+                                    <div class="pop_inner">
+                                        <ul class="list_type05 j_toggle_list">
+                                            <li>
+                                                <div class="title j_toggle_open">비대면 실명확인 신청자격 및 거래 제한</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <ul class="list_dot">
+                                                        <li>법인: 국내 주식회사 영리법인</li>
+                                                        <li>대표자: 한국 국적의 단독 대표자로서, 법인 주식 25% 이상 최대 지분 소유자</li>
+                                                    </ul>
+                                                    <p class="txt_type06">※ 거래 제한 <br />외국법인, 대포통장 명의자, 전화금융사기계좌 명의자, 해외 납세 의무자, 단기다수계좌 개설(입출금통장만 제한) 등 기타 은행 정책으로 인한 거래 제한 사업자</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">시작 전 준비물</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <!-- 2021.06.25 Update -->
+                                                    <ul class="list_dot">
+                                                        <li>대표자 신분증: 주민등록증, 운전면허증 중 택1</li>
+                                                        <li>사업자 실명확인증표: 사업자등록증명원, 등기사항전부증명서(발급용)</li>
+                                                        <li>금융거래목적확인: 부가가치세과세표준증명원, 표준재무제표증명원 중 택1</li>
+                                                        <li>실제소유자확인: 주주명부, 주식등변동상황명세서 중 택1</li>
+                                                        <li>사업자 공동인증서</li>
+                                                        <li>당,타행 기 개설된 사업자 명의 입출금 계좌</li>
+                                                    </ul>
+                                                    <!-- //2021.06.25 Update -->
+                                                    <p class="txt_type06">※서류는 발급일로부터 90일 이내인 것만 유효합니다.<br />(단, 사업자등록증명원은 신청일 포함하여 이후 발급분만 가능)</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">서비스 이용 시간</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <ol>
+                                                        <li>업무신청: 매일 00:10 ~ 23:50</li>
+                                                        <li>손님케어섹션 (1599-2111) 업무처리
+                                                            <ul class="list_dot mt5">
+                                                                <li>문의응대, 상담 등: [은행영업일] 09:00 ~ 18:00</li>
+                                                                <li>신청내역 처리: [은행영업일] 09:00 ~ 17:30</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">기타 유의사항</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <ul class="list_dot">
+                                                        <li>특정금융거래정보의 보고 및 이용 등에 관한 법률 준수 및 전기통신금융사기 피해예방을 위해 금융거래목적을 확인합니다.</li>
+                                                        <li>제공 정보에 대한 검증이 불가능한 경우 거래가 지연되거나 거절될 수 있으며, 제공된 정보는 금융실명법 등 관련 법률에 의해 보호됩니다.</li>
+                                                        <li>신청하신 업무가 취소된 경우 개인정보는 안전하게 삭제되며, 완료된 건의 증빙자료는 관련 법령에 따라 계좌 해지 후 5년간 보존합니다.</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tabcont">
+                                    <div class="pop_inner">
+                                        <ul class="list_type05 j_toggle_list">
+                                            <li>
+                                                <div class="title j_toggle_open">법인 비대면 실명확인이란?</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <p>법인 사업자의 실명확인이 필요한 각종 금융거래 시 영업점 방문없이 스마트폰으로 거래하는 방법입니다.</p>
+                                                    <p class="txt_type06">※ 비대면실명확인 방식<br />대표자 휴대폰 본인인증 + 사업자 공동인증서 + 대표자 신분증 및 사업자서류 제출 + 기존 당 타행 계좌 활용</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">서비스 이용 가능 채널</div>
+                                                <div class="cont j_toggle_cont">
+                                                   <p>[APP] 하나원큐기업</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">서비스 이용 가능 스마트폰 기종</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <p>기종 제한은 없으나 OS별로 모바일OTP 이용이 제한됩니다. (안드로이드 4.3, iOS 8.0 미만에서 이용 불가)</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">대표자 신분증 및 서류 촬영 제출</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <p>신분증 또는 서류가 훼손된 경우, 또는 촬영 시 빛 반사 등으로 인하여 식별이 어려운 경우 제대로 인식되지 않을 수 있습니다. 이 경우 서류 재촬영 요청을 받을 수 있으며, 신분증 진위 확인 과정에서 신청이 거절될 수 있으니 입력 내용을 정확히 확인하시기 바랍니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">대표자 신분증 진위 확인</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <p>신분증 이미지 등의 문제로 진위 확인이 자동으로 처리되지 않는 경우 업무처리가 이루어지지 않습니다. 최종적으로 제출하신 신분증의 진위확인이 어렵다고 판단되는 경우 승인이 거절됩니다.</p> <!-- 2021.06.25 Update -->
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">기존 계좌의 활용</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <ul class="list_dot">
+                                                        <li>타 금융기관 계좌 활용: 타 금융회사에 개설된 사업자 명의 입출금 계좌를 입력하면 해당 계좌로 당행에서 1원 송금과 함께 인증번호를 전송합니다. 확인 후 신청 화면에 인증번호를 입력하여 일치하면 검증 완료 됩니다.</li>
+                                                        <li>하나은행 계좌 활용: 하나은행에 입출금통장이 있는 경우, 기존 계좌의 비밀번호를 입력하여 일치하면 검증 완료 됩니다.</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">신청 취소</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <ul class="list_dot">
+                                                        <li>신청 중인 업무: '신청결과 조회'를 통해 '신청중인 목록'에서 삭제하여 취소</li> <!-- 2021.06.25 Update -->
+                                                        <li>신청 완료 후 미가입된 업무: 고객센터(1599-2111)를 통해서 취소</li>
+                                                        <li>상품 가입이 완료된 경우: 영업점 또는 인터넷/스마트폰뱅킹에서 해지</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">이어서 신청</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <p>신청 중 중단한 경우 신청일로부터 7일간 이어서 신청이 가능하며 '신청결과 조회'를 통해 '신청중인 목록'에서 이어서 진행이 가능합니다. 완료하지 않은 신청건은 7일 후 자동으로 신청이 취소됩니다.</p> <!-- 2021.06.25 Update -->
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">신청결과 조회</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <p>신청이 완료된 경우 '신청결과조회 &gt; 휴대폰 본인인증' 후 신청결과에 대해 조회가 가능합니다.<br />(대표자 신분증 진위확인 상태, 추가인증 상태 등 포함)</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tabcont">
+                                    <div class="pop_inner">
+                                        <ul class="list_type05 j_toggle_list">
+                                            <li>
+                                                <div class="title j_toggle_open">신청 가능 업무</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <ul class="list_dot">
+                                                        <li>계좌개설: 기업자유예금, 외화다통화예금</li>
+                                                        <li>전자금융: 기업전자금융(인터넷/스마트폰뱅킹), 모바일OTP발급</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">입출금통장 가입 제한</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <p>비대면 실명확인을 통해서는 법인 자격 당 1개만 가입 가능합니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">입출금통장 가입 후 통장 발행</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <p>통장 발급은 영업점 방문 후 은행이 요구하는 서류를 제출하셔야 가능합니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">입출금통장 이용한도</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <p>법인 비대면 실명확인을 통해 입출금통장을 가입하였을 경우, 입출금 이용 한도에 제한이 없습니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">상품별 가입 제한</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <p>상품별 가입 개수 제한이 있는 경우 기존 영업점을 통한 가입 계좌를 포함하여 추가 가입이 제한됩니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">개설 계좌번호 확인</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <ul class="list_dot">
+                                                        <li>개설 완료 후 LMS를 통해 개설된 계좌번호를 안내해 드립니다.</li>
+                                                        <li>LMS가 삭제된 경우 신청결과 조회를 통해 개설된 계좌번호 확인이 가능합니다.</li> <!-- 2021.06.25 Update -->
+                                                        <li>전자금융 가입고객은 전자금융 로그인 후 계좌조회 메뉴에서 확인이 가능합니다.</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">전자금융 가입</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <ul class="list_dot">
+                                                        <li>기존 입출금통장을 보유하신 손님은 전자금융만 단독 가입 가능합니다.</li>
+                                                        <li>입출금통장 신규 시 전자금융 회원이 아닌 경우 비대면 거래의 편의를 위해 전자금융이 동시 가입(필수)됩니다.</li>
+                                                        <li>기업전자금융 신규 시 ID는 '마스터+사용자'로 가입 됩니다</li>
+                                                    </ul>
+                                                    <p class="txt_type06">※ 마스터+사용자란? <br />각 사용자에 사용권한을 부여하고 기업의 시스템사용에 관해 총괄관리하는 자로서 필요에 따라 자신도 사용자로 등록하여 거래 업무를 수행 가능.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title j_toggle_open">모바일OTP 발급 안내</div>
+                                                <div class="cont j_toggle_cont">
+                                                    <ul class="list_dot">
+                                                        <li>앱 기반의 하나은행 전용 일회용 비밀번호 생성기로 실물이 없는 무료 보안매체입니다.</li>
+                                                        <li>하나은행 외에 타 금융기관에서는 사용이 불가능하며 1인 1기기에서만 이용이 가능합니다.</li>
+                                                        <li>아이폰, 안드로이드폰 모두 가능합니다. (단, 안드로이드 4.3이상, 아이폰 iOS 8.0 이상)</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //2021.05.21 Update -->
+                        </div>
+                    </div>
+                    <button type="button" class="cancel j_layer_close">취소</button>
+                </div>
+            </div>
+        </div>
+        <!-- //서비스 가이드 -->
+
+        <script>
+            $(window).load(function(){
+                layerOpen.init('#menuNav');
+            })
+        </script>
+        
+    </body>
+</html>

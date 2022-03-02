@@ -1,0 +1,245 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header class="steps_area">
+                <button class="back_btn"></button>
+                <h2 class="h_tit">
+                    <ul>
+                        <li class="end"><span></span></li>
+                        <li class="ing"><span>2 기본정보</span></li>
+                        <li><span>3</span></li>
+                        <li><span>4</span></li>
+                    </ul>
+                </h2>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_mi">대표자 정보</span>를 <br />입력해 주세요.</p> <!-- 2021.05.07 Update -->
+
+                    <div id="upScroll" class="input_form_group j_focus_group on">
+                        <!-- 대표자 주민등록번호 -->
+                        <div class="input_form"><!-- class error_on 추가시 에러 메시지 노출 -->
+                            <div class="input_wrap">
+                                <label for="idInput-G1-01" class="input_title j_focus_open">대표자 주민등록번호<span class="required">*</span></label>
+                                <div class="input_txt">
+                                    <input type="number" id="idInput-G1-01" class="input_data input_id01 j_input_value">-<input type="password" class="input_data input_id02 j_input_value" />
+                                </div>
+                            </div>
+                            <div class="input_error">
+                                <p>주민등록번호 앞 6자리를 입력해 주세요.</p>
+                            </div>
+                        </div>
+                        <!-- //대표자 주민등록번호 -->
+
+                        <!-- 대표자명 -->
+                        <div class="input_form">
+                            <div class="input_wrap">
+                                <label for="idInput-G1-02" class="input_title j_focus_open">대표자명<span class="required">*</span></label>
+                                <div class="input_txt">
+                                    <input id="idInput-G1-02" class="input_data j_input_value" type="text" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //대표자명 -->
+                        
+                    <!-- </div>
+
+                    <div class="input_form_group j_focus_group"> -->
+                        <!-- 자택 주소 -->
+                        <!-- 2021.06.28 Update -->
+                        <div class="input_form in_fixed_btn">
+                            <div class="input_wrap">
+                                <div class="input_title j_focus_open">자택 주소<span class="required">*</span></div>
+                                <div class="input_layer">
+                                    <div id="idInput-G1-03" class="input_data"></div>
+                                </div>
+                            </div>
+                            <div class="input_wrap">
+                                <!-- D : 디폴트 <div class="input_layer sub">
+                                         데이터 불러오면 <div class="input_layer sub on"> -->
+                                <div class="input_layer sub">
+                                    <div id="idInput-G1-04" class="input_data">상세주소</div>
+                                </div>
+                            </div>
+                            <button type="button" class="txt_btn">고객정보변경</button>
+                        </div>
+                        <!-- //2021.06.28 Update -->
+                        <!-- //자택 주소 -->
+
+                        <!-- 2021.06.01 Update -->
+                        <!-- 휴대전화 -->
+                        <div class="input_form">
+                            <div class="input_wrap">
+                                <label for="idInput-G1-06" class="input_title j_focus_open">휴대전화<span class="required">*</span></label>
+                                <div class="input_txt">
+                                    <input id="idInput-G1-06" class="input_data j_input_valuel" type="tel" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //휴대전화 -->
+                        <!-- 2021.06.01 Update -->
+
+                        <!-- 자택 전화번호 -->
+                        <!-- 2021.06.28 Update -->
+                        <div class="input_form in_fixed_btn">
+                            <div class="input_wrap">
+                                <label for="idInput-G1-05" class="input_title j_focus_open">자택 전화번호</label>
+                                <div class="input_txt">
+                                    <input id="idInput-G1-05" class="input_data j_input_value" type="tel" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                            <button type="button" class="txt_btn">휴대폰번호와 동일</button>
+                        </div>
+                        <!-- //2021.06.28 Update -->
+
+                        <!-- 2021.06.30 위치이동, 2021.06.28 Update -->
+                        <div class="guide_info_list">
+                            <ul class="list_dot">
+                                <li>본 화면에서 변경한 대표자의 주소, 연락처는 법인 거래를 위한 고객확인 정보로만 활용됩니다.</li>
+                                <li>대표자 개인의 하나은행 고객정보는 변경되지 않으며, 대표자 개인의 주소, 연락처 등 고객정보 변경이 필요하실 경우 개인스마트폰뱅킹(하나1Q), 개인인터넷뱅킹 혹은 영업점 방문을 통해 별도로 변경하시기 바랍니다.</li>
+                            </ul>
+                        </div>
+                        <!-- //2021.06.30 위치이동, 2021.06.28 Update -->
+
+                        <!-- 2021.04.27 Update -->
+                        <!-- <div class="input_form input_form_sel  mt15">
+                            <div class="input_check">
+                                <input type="checkbox" id="inputCheck-G1-01" class="j_input_check" input-target="" />
+                                <label for="inputCheck-G1-01">휴대폰번호와 동일</label>
+                            </div>
+                        </div> -->
+                        <!-- //2021.04.27 Update -->
+                        <!-- //자택 전화번호 -->
+
+                        <!-- 2021.04.27 Update -->
+
+                    <!-- 2021.06.17 Update -->
+                    </div>
+                    <div class="loading_dot mt80">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_mi">법인의<br />고객확인 정보</span>를<br />입력해 주세요.</p> <!-- 2021.05.07 Update -->
+                    <div class="input_form_group j_focus_group on">
+                    <!-- //2021.06.17 Update -->
+                    
+                        <!-- <strong class="form_tit">고객확인 정보를 입력해 주세요.</strong> --> <!-- 2021.05.07 Update -->
+                        <!-- 자금원천 및 출처구분 -->
+                        <div class="input_form input_form_sel">
+                            <div class="input_wrap">
+                                <div class="input_title j_focus_open j_layer_open" layer-target="#layerpopup01" layer-slide-index="0">자금원천 및 출처구분<span class="required">*</span></div>
+                                <div class="input_select">
+                                    <div id="idInput-G2-01" class="input_data j_check_all j_layer_open" layer-target="#layerpopup01"  layer-slide-index="0"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //자금원천 및 출처구분 -->
+
+                        <!-- 거래목적 -->
+                        <div class="input_form input_form_sel">
+                            <div class="input_wrap">
+                                <div class="input_title j_focus_open j_layer_open" layer-target="#layerpopup01" layer-slide-index="1">거래목적<span class="required">*</span></div>
+                                <div class="input_select">
+                                    <div id="idInput-G2-02" class="input_data j_check_all j_layer_open" layer-target="#layerpopup01"  layer-slide-index="1"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //거래목적 -->
+                        <!-- //2021.04.27 Update -->
+                    </div>
+
+                    <div class="btn_wrap btn_fix">
+                        <a href="#none" class="btn_type01">다음</a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 2021.04.27 Update -->
+            <!-- 슬라이드 셀렉트 자금원천 및 출처구분, 거래목적  -->
+            <div id="layerpopup01" class="layerpopup">
+                <div class="layer_select">
+                    <div class="layer_contents">
+                        <div class="layer_contents_slide j_select_slide_cont">
+                            <!-- 자금원천 및 출처구분 -->
+                            <div class="slider_select j_select_slide">
+                                <div class="pop_tit">
+                                    <h5>자금원천 및 출처구분 선택</h5>
+                                </div>
+                                <div class="pop_content j_scroll">
+                                    <div class="swiper-wrapper">
+                                        <div class="pop_inner swiper-slide">
+                                            <ul class="select_list j_select">
+                                                <li><a href="#idInput-G2-01">사업소득</a></li>
+                                                <li><a href="#idInput-G2-01">부동산임대소득</a></li>
+                                                <li><a href="#idInput-G2-01">부동산양도소득</a></li>
+                                                <li><a href="#idInput-G2-01">금융소득(이자 및 배당)</a></li>
+                                                <li><a href="#idInput-G2-01">상속/증여</a></li>
+                                                <li><a href="#idInput-G2-01">일시재산양도로 인한 소득</a></li>
+                                                <li><a href="#idInput-G2-01">기타</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="cancel j_layer_close">취소</button> <!-- 2021.06.03 Update -->
+                            </div>
+                            <!-- //자금원천 및 출처구분 -->
+
+                            <!-- 거래목적 -->
+                            <div class="slider_select j_select_slide">
+                                <div class="pop_tit">
+                                    <h5>거래목적 선택</h5>
+                                </div>
+                                <div class="pop_content j_scroll">
+                                    <div class="swiper-wrapper">
+                                        <div class="pop_inner swiper-slide">
+                                            <ul class="select_list j_select">
+                                                <li><a href="#idInput-G2-02">사업상거래</a></li>
+                                                <li><a href="#idInput-G2-02">급여 및 운영비</a></li>
+                                                <li><a href="#idInput-G2-02">저축 및 투자</a></li>
+                                                <li><a href="#idInput-G2-02">대출원리금 상환결제</a></li>
+                                                <li><a href="#idInput-G2-02">보험료납부결제</a></li>
+                                                <li><a href="#idInput-G2-02">공과금납부결제</a></li>
+                                                <li><a href="#idInput-G2-02">카드대금결제</a></li>
+                                                <li><a href="#idInput-G2-02">기타</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="cancel j_layer_close">취소</button> <!-- 2021.06.03 Update -->
+                            </div>
+                            <!-- //거래목적 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //슬라이드 셀렉트 자금원천 및 출처구분, 거래목적 -->
+            <!-- //2021.04.27 Update -->
+
+        </div>
+    </body>
+</html>

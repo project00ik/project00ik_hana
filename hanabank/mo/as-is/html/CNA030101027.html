@@ -1,0 +1,202 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header class="steps_area">
+                <button class="back_btn"></button>
+                <h2 class="h_tit">
+                    <ul>
+                        <li class="end"><span></span></li>
+                        <li class="end"><span>2</span></li>
+                        <li class="ing"><span>3 상품신청</span></li>
+                        <li><span>4</span></li>
+                    </ul>
+                </h2>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_mi">외화다통화예금</span></p>
+
+                    <div id="upScroll" class="input_form_group on">
+                        <!-- 기본 통화 -->
+                        <div class="input_form input_form_sel disabled">
+                            <div class="input_wrap on">
+                                <div class="input_title j_focus_open disabled" layer-target ="#layerpopup00">기본 통화</div>
+                                <div class="input_select">
+                                    <div id="idInput-G0-01" class="input_data disabled" layer-target="#layerpopup00">USD</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="txt_notice02">기본 통화 USD로 외화다통화계좌 개설 후, 개설된 계좌로 송금(27개국 통화) 거래 시 거래된 외화로 추가 활성화 됩니다.</p> <!-- 2021.06.17 Update -->
+                        <!-- //기본 통화 -->
+                    </div>
+
+                    <div class="input_form_group on">
+                        <!-- 신규 비밀번호 -->
+                        <div class="input_form"><!-- class error_on 추가시 에러 메시지 노출 -->
+                            <div class="input_wrap">
+                                <label for="idInput-G1-01" class="input_title j_focus_open">신규 비밀번호<span class="required">*</span></label>
+                                <div class="input_txt">
+                                    <input type="password" id="idInput-G1-01" class="input_data j_input_value" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                            <div class="input_error">
+                                <p>연속되는 숫자는 비밀번호로 사용할 수 없습니다.</p>
+                            </div>
+                        </div>
+                        <!-- //신규 비밀번호 -->
+
+                        <!-- 비밀번호 확인 -->
+                        <div class="input_form"><!-- class error_on 추가시 에러 메시지 노출 -->
+                            <div class="input_wrap">
+                                <label for="idInput-G1-02" class="input_title j_focus_open">비밀번호 확인<span class="required">*</span></label>
+                                <div class="input_txt">
+                                    <input type="password" id="idInput-G1-02" class="input_data j_input_value" />
+                                    <button type="button" class="input_data_del j_data_del">삭제</button>
+                                </div>
+                            </div>
+                            <div class="input_error">
+                                <p>입력하신 비밀번호가 일치하지 않습니다.</p>
+                            </div>
+                        </div>
+                        <!-- <p class="txt_notice02">함께 가입하시는 예,적금의 비밀번호로 설정됩니다.</p> -->
+                        <!-- //비밀번호 확인 -->
+
+                        <div class="txt_notice j_toggle">
+                            <button type="button" class="txt_notice_open j_toggle_open">알아두세요</button>
+                            <div class="txt_notice_cont j_toggle_cont">
+                                <ul class="list_type01">
+                                    <li>숫자 4자리로 입력하세요.</li>
+                                    <li>주민등록번호, 생년월일, 전화번호(휴대폰번호, 사업자번호)는 등록할 수 없습니다.</li> <!-- 2021.06.28 Update -->
+                                    <li>동일숫자 또는 연속된 숫자는 등록할 수 없습니다.<br />(ex. 1111, 1234)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 전자금융 출금계좌 등록 -->
+                        <div class="input_form input_form02 input_form_sel">
+                            <div class="input_check">
+                                <input type="checkbox" id="inputCheck-G1-03" class="j_input_check" input-target="#idInput-G1-03">
+                                <label for="inputCheck-G1-03">전자금융 출금계좌 등록</label>
+                            </div>
+                            <div class="input_wrap">
+                                <div class="input_title j_focus_open j_layer_open" layer-target="#layerpopup01">이용자 아이디</div>
+                                <div class="input_select">
+                                    <div id="idInput-G1-03" class="input_data j_layer_open" layer-target="#layerpopup01"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 전자금융 출금계좌 등록 -->
+
+                        <div class="txt_notice j_toggle">
+                            <button type="button" class="txt_notice_open j_toggle_open">알아두세요</button>
+                            <div class="txt_notice_cont j_toggle_cont">
+                                <ul class="list_type01">
+                                    <li>전자금융 출금계좌 등록을 해야 해당 계좌에서 모바일/인터넷 이체가 가능합니다.</li>
+                                    <!-- 2021.05.07 Update -->
+                                    <li>선택하신 ID로 로그인하였을 경우에만 출금계좌로 사용 가능합니다.</li>
+                                    <li>기업자유예금과 함께 외화다통화예금 신청 시 기업자유예금에 등록한 출금계좌와 동일하게 적용됩니다.</li>
+                                    <!-- //2021.05.07 Update -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn_wrap btn_fix">
+                        <a href="#none" class="btn_type01">다음</a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 기본 통화 선택 -->
+            <div id="layerpopup00" class="layerpopup">
+                <div class="layer_select">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <h5>기본 통화 선택</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide">
+                                    <ul class="select_list j_select">
+                                        <li><a href="#idInput-G0-01">USD</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //기본 통화 선택 -->
+
+            <!-- 이용자 아이디 -->
+            <!-- <div id="layerpopup01" class="layerpopup">
+                <div class="layer_select">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <h5>이용자 아이디</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide j_typeOfAccount" element-target='#selectedID'>
+                                    <ul class="select_list j_select">
+                                        <li><a href="#idInput-G1-03" class="j_layer_open j_get_data" layer-target="#layerpopup02">마스터 + 사용자ID</a></li>
+                                        <li><a href="#idInput-G1-03">단독사용자</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div> -->
+            <!-- //이용자 아이디 -->
+
+            <!-- 출금계좌 등록 가능 아이디 -->
+            <div id="layerpopup01" class="layerpopup">
+                <div class="layer_select">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <h5>출금계좌 등록 가능 아이디</h5>
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide">
+                                    <ul class="select_list j_select">
+                                        <li><a href="#idInput-G1-03">hana123</a></li>
+                                        <li><a href="#idInput-G1-03">hana456</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //출금계좌 등록 가능 아이디 -->
+        </div>
+    </body>
+</html>

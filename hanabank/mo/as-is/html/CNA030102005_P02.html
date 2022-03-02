@@ -1,0 +1,102 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no, address=no, email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-control" content="No-cache">
+        <meta http-equiv="Pragma" content="No-cache">
+        <title>법인비대면실명확인</title>
+        <link rel="stylesheet" href="../css/cna-untact-custom.css">
+        <script type="text/javascript" src="../js/ui/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="../js/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../js/ui/rolldate.js"></script>
+        <script type="text/javascript" src="../js/ui/swiper.js"></script>
+        <script type="text/javascript" src="../js/ui/untact-common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper j_up_scroll">
+            <header>
+                <button class="back_btn"></button>
+                <p class="h_tit">신청결과</p>
+                <button class="h_menu"></button>
+            </header>
+            <div class="contents">
+                <section>
+                    <div class="loading_dot" style="visibility: hidden;">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="pages_tit"><span class="t_de">신청중인 상품이<br><span class="color01"><em class="t_de number">2</em>건</span> 있습니다.</span></p>
+
+                    <div id="upScroll" class="input_form_group j_focus_group on"></div> <!-- 2021.06.07 Update -->
+                </section>
+            </div>
+
+            <!-- 신청중 상세 팝업 -->
+            <div class="layerpopup" id="layerpopup01">
+                <div class="layer_90">
+                    <div class="layer_contents">
+                        <div class="pop_tit">
+                            <!-- 2021.05.26 Update -->
+                            <div class="current_result_info">
+                                <h5>신청번호[<span>20200312312245</span>]<br />진행상황입니다. </h5>
+                                <p>최종진행일 : <span class="color01 t_de">2020.02.05</span></p>
+                            </div>
+                            <!-- //2021.05.26 Update -->
+                        </div>
+                        <div class="pop_content j_scroll">
+                            <div class="swiper-wrapper">
+                                <div class="pop_inner swiper-slide">
+                                    <div class="applied_result">
+                                        <ul>
+                                            <li class="waiting">
+                                                <strong>신청중</strong>
+                                                <span><a href="#none" class="j_layer_open" layer-target="#layerpopup02">하나멤버스 주거래 통장</a></span>
+                                            </li> 
+                                            <li class="waiting">
+                                                <strong>신청중</strong>
+                                                <span>하나멤버스 우대적금 상품명이 두줄인 경우는 요로케</span>
+                                            </li>
+                                            <li class="waiting">
+                                                <strong>신청중</strong>
+                                                <span>전자금융(개인뱅킹)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="certify_progress">
+                                        <h6>본인인증 진행상태</h6>
+                                        <div class="status_ing">
+                                            <ol>
+                                                <li><span>약관동의</span></li>
+                                                 <!-- 2021.04.28 Update -->
+                                                <li class="ing"><span>법인사업자정보</span><button type="button" class="btn_type04">이어하기</button></li>
+                                                <li><span>대표자정보</span></li>
+                                                <li><span>고객확인정보</span></li>
+                                                <li><span>FATCA</span></li>
+                                                <li><span>신청서</span></li>
+                                                 <!-- //2021.04.28 Update -->
+                                                <li><span>신분증 인증 및 서류제출</span></li> <!-- 2021.04.27 Update -->
+                                                <li><span>추가인증</span></li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cancel j_layer_close">취소</button> <!-- 2021.06.01 Uadate -->
+                    </div>
+                </div>
+            </div>
+            <!-- //신청중 상세 팝업 --> 
+
+        </div>
+
+        <script>
+            $(window).load(function(){
+                layerOpen.init('#layerpopup01');
+            })
+        </script>
+    </body>
+</html>
